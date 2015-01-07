@@ -1,0 +1,27 @@
+Source: @PKG_DEB_NAME@
+Section: net
+Priority: optional
+Maintainer: Likewise Software <support@likewise.com>
+Build-Depends: dpkg-dev (>= 1.10.28), debhelper (>= 4.2), lsb-base
+Standards-Version: 3.7.2
+Homepage: http://www.likewiseopen.org/
+
+Package: @PKG_DEB_NAME@
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Authentication services for Active Directory domains
+ Likewise Open integrates Unix desktops and servers into an Active Directory
+ environment by joining hosts to the domain and lets Unix applications and
+ services authenticate Windows users and groups via the PAM and Name Service
+ Switch libraries.
+
+Package: @PKG_DEB_NAME@-dev
+Section: libdevel
+Architecture: any
+Depends: @PKG_DEB_NAME@ (= ${binary:Version})
+Description: Likewise Open (development packages)
+ Likewise Open integrates Unix desktops and servers into an Active Directory
+ environment by joining hosts to the domain and lets Unix applications and
+ services authenticate Windows users and groups via the PAM and Name Service
+ Switch libraries.
+

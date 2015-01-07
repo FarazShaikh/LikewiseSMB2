@@ -1,0 +1,51 @@
+MODULES="compiler doxygen"
+SUBDIRS='include src test example doc'
+
+option()
+{
+    mk_option \
+        OPTION=lwmsg-examples \
+        VAR="LWMSG_BUILD_EXAMPLES" \
+        DEFAULT="no" \
+        HELP="Build and install example programs"
+}
+
+configure()
+{
+    mk_config_header "include/config.h"
+
+    lw_define_feature_macros
+
+    MK_CFLAGS="$MK_CFLAGS -Wall -Werror -Wmissing-prototypes"
+
+    mk_check_headers \
+        string.h \
+        strings.h \
+        sys/types.h \
+        sys/socket.h \
+        sys/varargs.h \
+        sys/select.h \
+        unistd.h
+        
+    mk_check_libraries FAIL=yes \
+        lwbase lwbase_nothr
+        
+    mk_check_libraries \
+        pthread rt dl xnet
+
+    lw_check_iconv
+    
+    mk_check_functions \
+        HEADERDEPS="sys/types.h sys/socket.h unistd.h" \
+        getpeereid
+
+    mk_multiarch_do
+        mk_define "MOD_EXT" "${MK_DLO_EXT}"
+        mk_check_endian
+    mk_multiarch_done
+
+    mk_check_doxygen
+    mk_check_moonunit
+    
+    [ "$LWMSG_BUILD_EXAMPLES" = "yes" ] || mk_skip_subdir example
+}

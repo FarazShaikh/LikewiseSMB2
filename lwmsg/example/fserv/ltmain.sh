@@ -1,0 +1,1 @@
+/home/ssalley/workspaces/Platform-6.1.run/share/libtool/config/ltmain.sh

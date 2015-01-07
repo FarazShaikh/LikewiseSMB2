@@ -1,0 +1,165 @@
+/* include/config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* CPU set type */
+#undef CPU_SET_TYPE
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Have MoonUnit */
+#undef HAVE_MOONUNIT
+
+/* Define to 1 if you have the <moonunit/moonunit.h> header file. */
+#undef HAVE_MOONUNIT_MOONUNIT_H
+
+/* Define to 1 if you have the `pthread_attr_setaffinity_np' function. */
+#undef HAVE_PTHREAD_ATTR_SETAFFINITY_NP
+
+/* Define to 1 if you have the <pthread.h> header file. */
+#undef HAVE_PTHREAD_H
+
+/* Define to 1 if you have the <pthread_np.h> header file. */
+#undef HAVE_PTHREAD_NP_H
+
+/* Define to 1 if you have the `pthread_setaffinity_np' function. */
+#undef HAVE_PTHREAD_SETAFFINITY_NP
+
+/* Define to 1 if you have the `sigwaitinfo' function. */
+#undef HAVE_SIGWAITINFO
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strncasecmp' function. */
+#undef HAVE_STRNCASECMP
+
+/* Define to 1 if you have the `strndup' function. */
+#undef HAVE_STRNDUP
+
+/* Define to 1 if you have the <sys/cpuset.h> header file. */
+#undef HAVE_SYS_CPUSET_H
+
+/* Define to 1 if you have the <sys/epoll.h> header file. */
+#undef HAVE_SYS_EPOLL_H
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#undef HAVE_SYS_SOCKET_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/varargs.h> header file. */
+#undef HAVE_SYS_VARARGS_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the <uuid/uuid.h> header file. */
+#undef HAVE_UUID_UUID_H
+
+/* Define to 1 if you have the `wcscasecmp' function. */
+#undef HAVE_WCSCASECMP
+
+/* Define to 1 if you have the <wctype.h> header file. */
+#undef HAVE_WCTYPE_H
+
+/* iconv in type */
+#undef ICONV_IN_TYPE
+
+/* Library directory */
+#undef LIBDIR
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
+/* lock atomic operations */
+#undef LWBASE_ATOMIC_LOCK
+
+/* x86 atomic operations */
+#undef LWBASE_ATOMIC_X86
+
+/* x86_64 atomic operations */
+#undef LWBASE_ATOMIC_X86_64
+
+/* Define standard macro for Big Endian systems */
+#undef LW_BIG_ENDIAN
+
+/* Define standard macro for Little Endian systems */
+#undef LW_LITTLE_ENDIAN
+
+/* Extension of shared modules */
+#undef MOD_EXT
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* The size of `wchar_t', as computed by sizeof. */
+#undef SIZEOF_WCHAR_T
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to use epoll backend */
+#undef USE_EPOLL
+
+/* Define to use kqueue backend */
+#undef USE_KQUEUE
+
+/* Define to use poll backend */
+#undef USE_POLL
+
+/* Define to use select backend */
+#undef USE_SELECT
+
+/* Version number of package */
+#undef VERSION
+
+/* Define to 1 if your processor stores words with the most significant byte
+   first (like Motorola and SPARC, unlike Intel and VAX). */
+#undef WORDS_BIGENDIAN
+
+/* Define if OS is Darwin */
+#undef __LWI_DARWIN__
+
+/* Define if OS is HP-UX */
+#undef __LWI_HP_UX__

@@ -1,0 +1,6 @@
+make()
+{
+    mk_stage \
+        SOURCE="netlogond.reg" \
+        DESTDIR="${LW_CONFIGDIR}"
+}
