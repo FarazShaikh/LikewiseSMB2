@@ -215,6 +215,11 @@ typedef struct _IRP_ARGS_SET_QUOTA {
     IN ULONG Length;
 } IRP_ARGS_SET_QUOTA, *PIRP_ARGS_SET_QUOTA;
 
+typedef struct _IRP_ARGS_PEEK_NAMED_PIPE_WRITE {
+    IN PFILE_QUOTA_INFORMATION Buffer;
+    IN ULONG Length;
+} IRP_ARGS_PEEK_NAMED_PIPE_WRITE, *PIRP_ARGS_PEEK_NAMED_PIPE_WRITE;
+
 typedef struct _IRP {
     IN IRP_TYPE Type;
     OUT IO_STATUS_BLOCK IoStatusBlock;
@@ -244,6 +249,7 @@ typedef struct _IRP {
         IRP_ARGS_QUERY_QUOTA QueryQuota;
         // IRP_TYPE_SET_QUOTA
         IRP_ARGS_SET_QUOTA SetQuota;
+        IRP_ARGS_PEEK_NAMED_PIPE_WRITE PeekNamedPipeWrite;
         // No args for IRP_TYPE_CLOSE, IRP_TYPE_FLUSH
     } Args;
     // TODO: Rename Args to Params?

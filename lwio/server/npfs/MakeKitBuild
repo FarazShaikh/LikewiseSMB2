@@ -1,0 +1,35 @@
+make()
+{
+    NPFS_SOURCES="\
+        ccb.c                    \
+        connectnp.c              \
+        createnp.c               \
+        driver.c                 \
+        file_access_info.c       \
+        file_pipe_info.c         \
+        file_std_info.c          \
+        globals.c                \
+        memory.c                 \
+        pipe.c                   \
+        read.c                   \
+        write.c                  \
+        close.c                  \
+        create.c                 \
+        deviceio.c               \
+        fcb.c                    \
+        file_basic_info.c        \
+        file_pipe_local_info.c   \
+        fsctl.c                  \
+        mdl.c                    \
+        peeknp.c                 \
+        queryinfo.c              \
+        setinfo.c"
+
+    mk_dlo \
+        DLO=libnpfs.sys \
+        SOURCES="$NPFS_SOURCES" \
+        INCLUDEDIRS=". ../include ../../include ../../include/lwio" \
+        HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
+        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \
+        SYMFILE="npfs.sym"
+}
