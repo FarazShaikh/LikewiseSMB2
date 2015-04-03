@@ -1,0 +1,23 @@
+make()
+{
+    DFS_SOURCES="\
+        ccb.c        \
+        close.c      \
+        config.c     \
+        create.c     \
+        driver.c     \
+        fcb.c        \
+        fsctrl.c     \
+        globals.c    \
+        irpctx.c     \
+        listq.c      \
+        memory.c"
+
+    mk_dlo \
+        DLO=libdfs.sys \
+        SOURCES="$DFS_SOURCES" \
+        INCLUDEDIRS=". ../include ../../include ../../include/lwio" \
+        HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
+        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \
+        SYMFILE="dfs.sym"
+}
