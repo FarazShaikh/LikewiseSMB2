@@ -1,0 +1,88 @@
+make()
+{
+    DFS_SOURCES="\
+    work_queue.c           \
+    queryfile.c            \
+    fileStandardInfo.c     \
+    create.c               \
+    fileDispositionInfo.c  \
+    attrib.c               \
+    fileFsSizeInfo.c       \
+    filePositionInfo.c     \
+    fsctrl_stub.c          \
+    string.c               \
+    create_file.c          \
+    alloc.c                \
+    querydir.c             \
+    fileEaInfo.c           \
+    attrib_xattr.c         \
+    fcb.c                  \
+    driver.c               \
+    acl_xattr.c            \
+    listq.c                \
+    fileIdFullDirInfo.c    \
+    fsctrl.c               \
+    fileFsVolInfo.c        \
+    thread_worker.c        \
+    fileIdBothDirInfo.c    \
+    fileCompressionInfo.c  \
+    fileInternalInfo.c     \
+    pathcache.c            \
+    queryvol.c             \
+    async_handler.c        \
+    deviceio.c             \
+    wildcard.c             \
+    irpctx.c               \
+    fileRenameInfo.c       \
+    fileFullEaInfo.c       \
+    globals.c              \
+    oplock.c               \
+    acl_posix.c            \
+    lock.c                 \
+    fileModeInfo.c         \
+    zct.c                  \
+    fileBothDirInfo.c      \
+    create_device.c        \
+    ccb_fileinfo.c         \
+    unixpath.c             \
+    errno.c                \
+    fileAllocationInfo.c   \
+    flush.c                \
+    util_open.c            \
+    querysecdesc.c         \
+    syswrap.c              \
+    fileNetworkOpenInfo.c  \
+    config.c               \
+    ccb.c                  \
+    fileFullDirInfo.c      \
+    fileDirInfo.c          \
+    util_time.c            \
+    fileAccessInfo.c       \
+    fileNameInfo.c         \
+    util_security.c        \
+    close.c                \
+    locking.c              \
+    fileStreamInfo.c       \
+    util_dir.c             \
+    fileNamesInfo.c        \
+    fileBasicInfo.c        \
+    acl.c                  \
+    read.c                 \
+    notify.c               \
+    write.c                \
+    create_dir.c           \
+    fileEndOfFileInfo.c    \
+    fileFsAttribInfo.c     \
+    fileAllInfo.c          \
+    ioctlOpenFileInfo.c    \
+    fileFsDeviceInfo.c     \
+    sharemode.c"
+
+    mk_dlo \
+        DLO=libdfs.sys \
+        SOURCES="$DFS_SOURCES" \
+        INCLUDEDIRS=". ../include ../../include ../../include/lwio" \
+        HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
+        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \
+        SYMFILE="dfs.sym"
+}
