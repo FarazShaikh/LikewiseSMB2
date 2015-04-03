@@ -47,6 +47,13 @@
 
 #include "includes.h"
 
+typedef struct __PATHNODE
+{
+    PSTR pszPath;
+    struct __PATHNODE *pNext;
+} PATHNODE, *PPATHNODE;
+
+
 static
 DWORD
 RegCreateDirectoryRecursive(
@@ -862,12 +869,6 @@ RegGetMatchingFilePathsInFolder(
     PDWORD pdwNPaths
     )
 {
-    typedef struct __PATHNODE
-    {
-        PSTR pszPath;
-        struct __PATHNODE *pNext;
-    } PATHNODE, *PPATHNODE;
-
     DWORD dwError = 0;
     DIR* pDir = NULL;
     struct dirent*  pDirEntry = NULL;

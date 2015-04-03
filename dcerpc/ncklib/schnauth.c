@@ -248,13 +248,10 @@ PRIVATE void rpc__schnauth_free_info
 )
 {
     rpc_schnauth_info_p_t schnauth_info = (rpc_schnauth_info_p_t)*info ;
-    char *info_type;
     unsigned32 tst;
 
     RPC_DBG_PRINTF(rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_ROUTINE_TRACE,
 		   ("(rpc__schnauth_free_info)\n"));
-
-    info_type = (*info)->is_server?"server":"client";
 
     RPC_MUTEX_DELETE(schnauth_info->lock);
 

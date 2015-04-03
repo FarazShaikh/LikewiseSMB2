@@ -264,5 +264,5 @@ make()
         CFLAGS="$NCK_CFLAGS" \
         HEADERDEPS="$NCK_HEADERDEPS" \
         GROUPDEPS="com rpc trans mgmt_stubs $NCK_EXTRA_GROUPS" \
-        LIBDEPS="$LIB_SOCKET $LIB_NSL $LIB_DL"
+        LIBDEPS="uuid $LIB_SOCKET $LIB_NSL $LIB_DL"
 }

@@ -518,12 +518,9 @@ INTERNAL void rpc__gssauth_free_info
 #endif
 {
 	rpc_gssauth_info_p_t gssauth_info = (rpc_gssauth_info_p_t)*info ;
-	const char *info_type;
 
 	RPC_DBG_PRINTF(rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_ROUTINE_TRACE,
 		("(rpc__gssauth_free_info)\n"));
-
-	info_type = (*info)->is_server?"server":"client";
 
 	if (gssauth_info->auth_info.server_princ_name) {
 		unsigned32 st;

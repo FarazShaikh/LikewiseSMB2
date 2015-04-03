@@ -258,7 +258,7 @@ configure()
     # Optional functions
     mk_check_functions \
         HEADERDEPS="pthread.h" \
-        LIBDEPS="$LIB_PTHREAD $LIB_RT" \
+        LIBDEPS="uuid $LIB_PTHREAD $LIB_RT" \
         pthread_yield sched_yield
 
     mk_check_functions \

@@ -248,7 +248,7 @@ configure()
 
     if mk_check_function \
         HEADERDEPS="security/pam_appl.h pam/pam_appl.h security/pam_modules.h pam/pam_modules.h" \
-        LIBDEPS="$LIB_PAM" \
+        LIBDEPS="uuid $LIB_PAM" \
         PROTOTYPE="int pam_get_data(const pam_handle_t* pamh,const char* module_data_name, const void** data)"
     then
         mk_msg_result "const void**"

@@ -553,10 +553,6 @@ rpc_auth_info_p_t               auth_info;
 unsigned32                      *st;
 #endif
 {
-    rpc_schnauth_info_p_t schnauth_info;
-
-    schnauth_info = (rpc_schnauth_info_p_t)auth_info;
-
     CODING_ERROR (st);
 
     RPC_DBG_PRINTF (rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_ROUTINE_TRACE,
@@ -1047,11 +1043,8 @@ unsigned32                      *st;
 #endif
 {
     rpc_cn_auth_value_priv_t    *priv_auth_value ATTRIBUTE_UNUSED;
-    unsigned32 ptype;
 
     CODING_ERROR(st);
-
-    ptype = sec->sec_info->authn_protocol;
 
     RPC_DBG_PRINTF (rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_ROUTINE_TRACE,
                     ("(rpc__schnauth_cn_pre_call)\n"));
@@ -1543,6 +1536,7 @@ unsigned32                      *st;
     ptype = pdu->ptype;
     priv_auth_value = (rpc_cn_auth_value_priv_t *)(auth_tlr->auth_value);
     authn_level = auth_tlr->auth_level;
+    authn_level = authn_level;
     if (ptype == RPC_C_CN_PKT_BIND)
     {
         assoc_uuid_crc = ((rpc_cn_bind_auth_value_priv_t *)priv_auth_value)->assoc_uuid_crc;
@@ -1551,6 +1545,7 @@ unsigned32                      *st;
     {
         assoc_uuid_crc = assoc_sec->assoc_uuid_crc;
     }
+    assoc_uuid_crc = assoc_uuid_crc;
 
     RPC_DBG_PRINTF (rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_GENERAL,
                     ("(rpc__schnauth_cn_recv_check) authn level->%x packet type->%x\n", authn_level, ptype));
@@ -1802,7 +1797,8 @@ unsigned32                      * /* st */
                     ("(rpc__schnauth_cn_vfy_client_req)\n"));
 
     priv_auth_value = (rpc_cn_bind_auth_value_priv_t *)auth_value;
-    
+    priv_auth_value = priv_auth_value;
+
     RPC_DBG_PRINTF (rpc_e_dbg_auth, RPC_C_CN_DBG_AUTH_PKT,
                     ("(rpc__schnauth_cn_vfy_client_req) prot->%x level->%x key_id->%x assoc_uuid_crc->%x xmit_seq->%x recv_seq->%x\n",
                     rpc_c_authn_schannel,

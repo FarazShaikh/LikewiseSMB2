@@ -24,4 +24,6 @@ configure()
     mk_check_functions \
         HEADERDEPS="string.h" \
         strndup
+
+    LIBDEPS="lsaserverapi lwnetclientapi lwadvapi lwioclient lwadvapi_nothr"
 }

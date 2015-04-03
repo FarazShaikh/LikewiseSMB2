@@ -408,7 +408,6 @@ INTERNAL void rpc__ntlmauth_free_info
 #endif
 {
 	rpc_ntlmauth_info_p_t ntlmauth_info = NULL;
-	const char *info_type = NULL;
 	unsigned32 st = 0;
 	OM_uint32 minor_status = 0;
 
@@ -422,7 +421,6 @@ INTERNAL void rpc__ntlmauth_free_info
 	}
 
 	ntlmauth_info = (rpc_ntlmauth_info_p_t)(*info);
-	info_type = ntlmauth_info->auth_info.is_server ? "server" : "client";
 
 	if (ntlmauth_info->auth_info.server_princ_name)
 	{
