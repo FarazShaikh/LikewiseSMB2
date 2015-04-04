@@ -11,7 +11,7 @@ option()
             ;;
     esac
 
-    _default_DRIVERS="rdr dfs npfs pvfs"
+    _default_DRIVERS="rdr dfs npfs pvfs srv"
 
     mk_option \
         OPTION=lwio-drivers \

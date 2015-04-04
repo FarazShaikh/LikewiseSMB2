@@ -1,0 +1,1255 @@
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/find.c,547
+SrvProcessFind_SMB_V2(199,6433
+SrvFindIdBothDirInformation(650,20224
+SrvMarshalIdBothDirInfoSearchResults(827,25916
+SrvFindBothDirInformation(992,31265
+SrvMarshalBothDirInfoSearchResults(1168,36887
+SrvFindIdFullDirInformation(1329,42004
+SrvMarshalIdFullDirInfoSearchResults(1505,47644
+SrvFindFullDirInformation(1646,52244
+SrvMarshalFullDirInfoSearchResults(1822,57864
+SrvFindDirectoryInformation(1962,62308
+SrvMarshalDirectoryInfoSearchResults(2138,67932
+SrvFindNamesInformation(2277,72339
+SrvMarshalNamesInfoSearchResults(2454,78058
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/create.c,708
+SrvProcessCreate_SMB_V2(161,3793
+SrvCancelCreate_SMB_V2(493,15089
+SrvBuildCreateState_SMB_V2(544,16500
+SrvCancelCreateStateHandle_SMB_V2(730,22255
+SrvCancelCreateStateHandle_SMB_V2_inlock(747,22635
+SrvQueryFileInformation_SMB_V2(759,22904
+SrvProcessCreateContexts_SMB_V2(856,26207
+SrvRequestCreateOplocks_SMB_V2(899,27393
+SrvPrepareCreateStateAsync_SMB_V2(1042,31502
+SrvExecuteCreateAsyncCB_SMB_V2(1059,31920
+SrvReleaseCreateStateAsync_SMB_V2(1095,33006
+SrvReleaseCreateStateHandle_SMB_V2(1126,33724
+SrvAcquireCreateState_SMB_V2(1135,33889
+SrvReleaseCreateState_SMB_V2(1146,34061
+SrvFreeCreateState_SMB_V2(1158,34277
+SrvBuildCreateResponse_SMB_V2(1235,36176
+SrvWriteCreateContext(1454,43902
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/utils.c,74
+SrvBuildTreeRelativePath_SMB_V2(53,1697
+SrvSetStatSession2Info(106,2963
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/tree.c,33
+SrvTree2FindFile_SMB_V2(53,1694
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/getfileinfo.c,1656
+SrvGetFileInfo_SMB_V2(285,5606
+SrvBuildFileInfoResponse_SMB_V2(406,8380
+SrvGetFileInternalInfo_SMB_V2(521,11114
+SrvBuildFileInternalInfoResponse_SMB_V2(533,11383
+SrvGetFileEAInfo_SMB_V2(638,15137
+SrvBuildFileEAInfoResponse_SMB_V2(650,15388
+SrvGetFileBasicInfo_SMB_V2(754,19063
+SrvBuildFileBasicInfoResponse_SMB_V2(766,19323
+SrvGetFileStandardInfo_SMB_V2(874,23356
+SrvBuildFileStandardInfoResponse_SMB_V2(886,23625
+SrvGetFileNetworkOpenInfo_SMB_V2(986,27212
+SrvBuildFileNetworkOpenInfoResponse_SMB_V2(998,27491
+SrvGetFileAccessInfo_SMB_V2(1115,32017
+SrvBuildFileAccessInfoResponse_SMB_V2(1127,32280
+SrvGetFilePositionInfo_SMB_V2(1226,35799
+SrvBuildFilePositionInfoResponse_SMB_V2(1238,36068
+SrvGetFileModeInfo_SMB_V2(1338,39643
+SrvBuildFileModeInfoResponse_SMB_V2(1350,39900
+SrvGetFileAllInfo_SMB_V2(1450,43435
+SrvBuildFileAllInfoResponse_SMB_V2(1462,43700
+SrvGetFileAlignmentInfo_SMB_V2(1609,49587
+SrvBuildFileAlignmentInfoResponse_SMB_V2(1621,49859
+SrvGetFileAltNameInfo_SMB_V2(1721,53444
+SrvBuildFileAltNameInfoResponse_SMB_V2(1733,53724
+SrvMarshallFileNameInfo_SMB_V2(1853,57751
+SrvGetFileAttrTagInfo_SMB_V2(1931,59972
+SrvBuildFileAttrTagInfoResponse_SMB_V2(1943,60249
+SrvGetFileStreamInfo_SMB_V2(2043,63850
+SrvBuildFileStreamInfoResponse_SMB_V2(2055,64124
+SrvMarshallFileStreamResponse(2165,67994
+SrvGetFileFullEAInfo_SMB_V2(2331,72826
+SrvBuildFileFullEAInfoResponse_SMB_V2(2343,73101
+SrvMarshallFileFullEAResponse(2453,76973
+SrvGetFileCompressionInfo_SMB_V2(2622,81888
+SrvBuildFileCompressionInfoResponse_SMB_V2(2634,82166
+SrvGetFileInfoGeneric_SMB_V2(2746,86450
+SrvGetFileInfoGeneric_WithString_SMB_V2(2804,88367
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/getfsinfo.c,585
+SrvGetFileSystemInfo_SMB_V2(119,2941
+SrvBuildFileSystemInfoResponse_SMB_V2(175,4244
+SrvGetFileSystemVolumeInfo_SMB_V2(232,5604
+SrvBuildFileSystemVolumeInfoResponse_SMB_V2(244,5883
+SrvGetFileSystemAttributeInfo_SMB_V2(361,10183
+SrvBuildFileSystemAttributeInfoResponse_SMB_V2(373,10471
+SrvGetFileSystemFullInfo_SMB_V2(488,14636
+SrvBuildFileSystemFullInfoResponse_SMB_V2(500,14898
+SrvGetFileSystemSizeInfo_SMB_V2(613,19111
+SrvBuildFileSystemSizeInfoResponse_SMB_V2(625,19361
+SrvGetFileSystemInfoGeneric_SMB_V2(730,23004
+SrvGetFileSystemInfoGeneric_WithString_SMB_V2(788,24933
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/ioctl.c,391
+SrvProcessIOCTL_SMB_V2(114,2741
+SrvBuildIOCTLState_SMB_V2(292,7547
+SrvExecuteIOCTL_SMB_V2(340,8622
+SrvBuildIOCTLResponse_SMB_V2(437,11903
+SrvPrepareIOCTLStateAsync_SMB_V2(520,14831
+SrvExecuteIOCTLAsyncCB_SMB_V2(537,15239
+SrvReleaseIOCTLStateAsync_SMB_V2(573,16317
+SrvReleaseIOCTLStateHandle_SMB_V2(604,17024
+SrvReleaseIOCTLState_SMB_V2(613,17183
+SrvFreeIOCTLState_SMB_V2(625,17393
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/wire.c,1400
+SMB2InitPacket(63,1944
+SrvUnmarshalHeader_SMB_V2(93,2692
+SMB2MarshalHeader(149,3886
+SMB2GetAsyncId(247,6436
+SMB2UnmarshalNegotiateRequest(277,6942
+SMB2UnmarshallSessionSetup(326,8248
+SMB2MarshalSessionSetup(402,10662
+SMB2UnmarshalLogoffRequest(484,12785
+SMB2MarshalLogoffResponse(516,13505
+SMB2UnmarshalTreeConnect(560,14499
+SMB2MarshalTreeConnectResponse(621,16331
+SMB2UnmarshalTreeDisconnectRequest(697,18374
+SMB2MarshalTreeDisconnectResponse(726,19109
+SMB2UnmarshalCreateRequest(768,19973
+SMB2UnmarshalCreateContexts(867,23269
+SMB2MarshalCreateContext(994,27505
+SMB2UnmarshalCloseRequest(1106,30587
+SMB2UnmarshalFlushRequest(1138,31330
+SMB2MarshalFlushResponse(1170,32044
+SMB2UnmarshalEchoRequest(1212,32900
+SMB2MarshalEchoResponse(1244,33627
+SMB2UnmarshalGetInfoRequest(1286,34477
+SMB2UnmarshalSetInfoRequest(1318,35230
+SMB2UnmarshalReadRequest(1365,36477
+SMB2MarshalReadResponse(1400,37406
+SMB2UnmarshalWriteRequest(1471,39056
+SMB2MarshalWriteResponse(1530,40791
+SMB2UnmarshalLockRequest(1579,41895
+SMB2MarshalLockResponse(1632,43341
+SMB2UnmarshalIOCTLRequest(1674,44240
+SMB2MarshalIOCTLResponse(1738,46276
+SMB2UnmarshalFindRequest(1801,48111
+SMB2UnmarshalOplockBreakRequest(1863,49967
+SMB2MarshalFindResponse(1901,50890
+SMB2UnmarshalNotifyRequest(1988,53200
+SMB2MarshalNotifyResponse(2026,54194
+SMB2MarshalError(2117,56692
+SMB2UnmarshallBoolean(2191,58316
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/treedisconnect.c,41
+SrvProcessTreeDisconnect_SMB_V2(54,1772
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/treeconnect.c,529
+SrvProcessTreeConnect_SMB_V2(126,3121
+SrvBuildTreeConnectState_SMB_V2(317,8729
+SrvPrepareTreeConnectStateAsync_SMB_V2(374,10204
+SrvExecuteTreeConnectAsyncCB_SMB_V2(391,10632
+SrvReleaseTreeConnectStateAsync_SMB_V2(427,11708
+SrvCreateTreeRootHandle_SMB_V2(458,12416
+SrvIoPrepareEcpList_SMB_V2(531,14811
+SrvIoFreeEcpString_SMB_V2(597,16504
+SrvBuildTreeConnectResponse_SMB_V2(612,16751
+SrvReleaseTreeConnectStateHandle_SMB_V2(736,21030
+SrvReleaseTreeConnectState_SMB_V2(745,21199
+SrvFreeTreeConnectState_SMB_V2(757,21425
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/notify_request.c,518
+SrvProcessNotify_SMB_V2(107,2752
+SrvProcessNotifyCompletion_SMB_V2(362,10833
+SrvCancelChangeNotify_SMB_V2(467,13715
+SrvCancelNotifyState_SMB_V2(514,15054
+SrvBuildNotifyRequestState_SMB_V2(531,15434
+SrvCancelNotifyState_SMB_V2_inlock(573,16434
+SrvExecuteChangeNotify_SMB_V2(585,16697
+SrvBuildNotifyResponse_SMB_V2(637,18262
+SrvMarshalNotifyResponse_SMB_V2(738,21535
+SrvReleaseNotifyRequestStateHandle_SMB_V2(875,25104
+SrvReleaseNotifyRequestState_SMB_V2(885,25311
+SrvFreeNotifyRequestState_SMB_V2(897,25570
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/prototypes.h,33
+#define __PROTOTYPES_H__51,1696
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/globals.c,60
+SRV_RUNTIME_GLOBALS_SMB_V2 gProtocolGlobals_SMB_V2 52,1713
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/oplock.c,658
+SrvBuildOplockState_SMB_V2(102,2648
+SrvProcessOplock_SMB_V2(150,3706
+SrvProcessOplockBreak_SMB_V2(339,9396
+SrvAcknowledgeOplockBreak_SMB_V2(473,13005
+SrvBuildOplockBreakNotification_SMB_V2(607,16376
+SrvBuildOplockBreakResponse_SMB_V2(717,19872
+SrvOplockExpiredCB_SMB_V2(827,23387
+SrvEnqueueOplockAckTask_SMB_V2(854,23885
+SrvReleaseOplockStateHandle_SMB_V2(889,24604
+SrvReleaseOplockState_SMB_V2(897,24754
+SrvFreeOplockState_SMB_V2(909,24970
+SrvPrepareOplockStateAsync_SMB_V2(938,25579
+SrvOplockAsyncCB_SMB_V2(954,25947
+SrvBuildOplockExecContext_SMB_V2(1061,28461
+SrvReleaseOplockStateAsync_SMB_V2(1183,32286
+SrvOplock2StateRundown(1209,32871
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/lockasync.c,745
+SrvBuildAsyncLockState_SMB_V2(109,2833
+SrvBuildExecContextAsyncLock_SMB_V2(154,3942
+SrvAcquireAsyncLockState_SMB_V2(298,8949
+SrvCancelLock_SMB_V2(308,9142
+SrvCancelAsyncLockState_SMB_V2(355,10492
+SrvProcessAsyncLockRequest_SMB_V2(371,10891
+SrvExecuteAsyncLockRequest_SMB_V2(562,17231
+SrvClearAsyncLocks_SMB_V2(647,20145
+SrvClearAsyncLocks_SMB_V2_inlock(662,20479
+SrvBuildAsyncLockResponse_SMB_V2(695,21469
+SrvCancelAsyncLockState_SMB_V2_inlock(775,24022
+SrvPrepareAsyncLockStateAsync_SMB_V2(787,24308
+SrvExecuteAsyncLockContextAsyncCB_SMB_V2(805,24832
+SrvReleaseAsyncLockStateAsync_SMB_V2(845,26086
+SrvReleaseAsyncLockStateHandle_SMB_V2(875,26902
+SrvReleaseAsyncLockState_SMB_V2(883,27076
+SrvFreeAsyncLockState_SMB_V2(895,27319
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/notify_state.c,365
+SrvNotifyCreateState_SMB_V2(72,1999
+SrvPrepareNotifyStateAsync_SMB_V2(146,4009
+SrvNotifyAsyncCB_SMB_V2(162,4377
+SrvNotifyBuildExecContext_SMB_V2(225,5797
+SrvReleaseNotifyStateAsync_SMB_V2(346,9465
+SrvNotifyStateAcquire_SMB_V2(372,10070
+SrvNotifyStateReleaseHandle_SMB_V2(382,10235
+SrvNotifyStateRelease_SMB_V2(390,10392
+SrvNotifyStateFree_SMB_V2(402,10608
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/lock.c,670
+SrvProcessLock_SMB_V2(143,3479
+SrvBuildLockRequestState_SMB_V2(398,11417
+SrvValidateLockRequest_SMB_V2(468,13579
+SrvDetermineLocks_SMB_V2(510,14669
+SrvDetermineUnlocks_SMB_V2(572,16078
+SrvAscertainIfLocksFailImmediately(635,17516
+SrvProcessSyncLockRequest_SMB_V2(674,18414
+SrvPrepareSyncLockStateAsync_SMB_V2(767,21393
+SrvExecuteLockContextAsyncCB_SMB_V2(784,21853
+SrvReleaseSyncLockStateAsync_SMB_V2(822,23040
+SrvClearLocks_SMB_V2(853,23811
+SrvClearLocks_SMB_V2_inlock(868,24109
+SrvBuildLockResponse_SMB_V2(905,25142
+SrvReleaseLockRequestStateHandle_SMB_V2(981,27500
+SrvReleaseLockRequestState_SMB_V2(991,27707
+SrvFreeLockRequestState_SMB_V2(1003,27954
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/defs.h,1041
+#define __DEFS_H__51,1681
+#define LWIO_DEFAULT_TIMEOUT_MSECS_SMB_V2 53,1701
+#define COM2_NEGOTIATE_DESC 55,1756
+#define COM2_SESSION_SETUP_DESC 56,1807
+#define COM2_LOGOFF_DESC 57,1862
+#define COM2_TREE_CONNECT_DESC 58,1910
+#define COM2_TREE_DISCONNECT_DESC 59,1964
+#define COM2_CREATE_DESC 60,2021
+#define COM2_CLOSE_DESC 61,2069
+#define COM2_FLUSH_DESC 62,2116
+#define COM2_READ_DESC 63,2163
+#define COM2_WRITE_DESC 64,2209
+#define COM2_LOCK_DESC 65,2256
+#define COM2_IOCTL_DESC 66,2302
+#define COM2_CANCEL_DESC 67,2349
+#define COM2_ECHO_DESC 68,2397
+#define COM2_FIND_DESC 69,2443
+#define COM2_NOTIFY_DESC 70,2489
+#define COM2_GETINFO_DESC 71,2537
+#define COM2_SETINFO_DESC 72,2586
+#define COM2_BREAK_DESC 73,2635
+#define SMB2_OPLOCK_LEVEL_BATCH 75,2683
+#define SMB2_OPLOCK_LEVEL_I 76,2720
+#define SMB2_OPLOCK_LEVEL_II 77,2757
+#define SMB2_OPLOCK_LEVEL_NONE 78,2794
+typedef USHORT LW_SMB2_OPLOCK_ACTION;80,2832
+#define LW_SMB2_OPLOCK_ACTION_SEND_BREAK 82,2871
+#define LW_SMB2_OPLOCK_ACTION_PROCESS_ACK 83,2920
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/flush.c,357
+SrvProcessFlush_SMB_V2(106,2555
+SrvBuildFlushState_SMB_V2(269,7059
+SrvBuildFlushResponse_SMB_V2(313,7966
+SrvPrepareFlushStateAsync_SMB_V2(389,10422
+SrvExecuteFlushAsyncCB_SMB_V2(406,10830
+SrvReleaseFlushStateAsync_SMB_V2(442,11903
+SrvReleaseFlushStateHandle_SMB_V2(474,12629
+SrvReleaseFlushState_SMB_V2(483,12771
+SrvFreeFlushState_SMB_V2(495,12981
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/session.c,36
+SrvSession2FindTree_SMB_V2(53,1697
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/config.c,42
+SrvConfigGetOplockTimeout_SMB_V2(53,1725
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/setinfo.c,1004
+SrvProcessSetInfo_SMB_V2(197,4036
+SrvBuildSetInfoState_SMB_V2(349,8356
+SrvSetInfo_SMB_V2(396,9417
+SrvBuildSetInfoResponse_SMB_V2(439,10382
+SrvSetFileInfo_SMB_V2(482,11399
+SrvBuildSetFileInfoResponse_SMB_V2(545,12836
+SrvSetFileEOFInfo_SMB_V2(588,13938
+SrvSetFileDispositionInfo_SMB_V2(626,15213
+SrvSetFileRenameInfo_SMB_V2(669,16614
+SrvUnmarshalRenameHeader_SMB_V2(756,19820
+SrvSetFileBasicInfo_SMB_V2(833,22556
+SrvSetFileAllocationInfo_SMB_V2(871,23751
+SrvBuildSetInfoCommonResponse_SMB_V2(909,24971
+SrvSetFileSystemInfo_SMB_V2(987,27686
+SrvBuildSetFileSystemInfoResponse_SMB_V2(996,27810
+SrvSetSecurityInfo_SMB_V2(1005,27947
+SrvSetSecurityDescriptor_SMB_V2(1036,28661
+SrvBuildSetSecurityInfoResponse_SMB_V2(1074,29916
+SrvPrepareSetInfoStateAsync_SMB_V2(1105,30644
+SrvExecuteSetInfoAsyncCB_SMB_V2(1122,31074
+SrvReleaseSetInfoStateAsync_SMB_V2(1158,32160
+SrvReleaseSetInfoStateHandle_SMB_V2(1189,32883
+SrvReleaseSetInfoState_SMB_V2(1199,33074
+SrvFreeSetInfoState_SMB_V2(1211,33297
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/getsecinfo.c,132
+SrvGetSecurityInfo_SMB_V2(61,1881
+SrvExecuteQuerySecurityDescriptor_SMB_V2(101,2869
+SrvBuildSecurityInfoResponse_SMB_V2(291,8767
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/logoff.c,73
+SrvProcessLogoff_SMB_V2(61,1846
+SrvBuildLogoffResponse_SMB_V2(115,3295
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/echo.c,31
+SrvProcessEcho_SMB_V2(55,1764
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/close.c,397
+SrvProcessClose_SMB_V2(113,2703
+SrvBuildCloseState_SMB_V2(326,8711
+SrvGetFileInformation_SMB_V2(372,9684
+SrvBuildCloseResponse_SMB_V2(429,11495
+SrvPrepareCloseStateAsync_SMB_V2(534,15367
+SrvExecuteCloseAsyncCB_SMB_V2(551,15775
+SrvReleaseCloseStateAsync_SMB_V2(587,16853
+SrvReleaseCloseStateHandle_SMB_V2(618,17560
+SrvReleaseCloseState_SMB_V2(627,17719
+SrvFreeCloseState_SMB_V2(639,17929
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/session_setup.c,39
+SrvProcessSessionSetup_SMB_V2(52,1708
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/structs.h,41857
+#define __STRUCTS_H__51,1690
+typedef struct __SMB2_NEGOTIATE_REQUEST_HEADER53,1713
+    USHORT  usLength;55,1762
+    USHORT  usDialectCount;56,1784
+    USHORT  usSecurityMode;57,1812
+    USHORT  usPad;58,1840
+    ULONG   ulCapabilities;59,1859
+    UCHAR   clientGUID[clientGUID60,1887
+    ULONG64 ulStartTime;61,1915
+                             *PSMB2_NEGOTIATE_REQUEST_HEADER;PSMB2_NEGOTIATE_REQUEST_HEADER65,2045
+typedef struct __SMB2_NEGOTIATE_RESPONSE_HEADER67,2108
+    USHORT  usLength;69,2158
+    BYTE    ucFlags;70,2180
+    BYTE    ucPad;71,2201
+    USHORT  usDialect;72,2220
+    USHORT  usPad2;73,2243
+    BYTE    serverGUID[serverGUID74,2263
+    ULONG   ulCapabilities;75,2291
+    ULONG   ulMaxTxSize;76,2319
+    ULONG   ulMaxReadSize;77,2344
+    ULONG   ulMaxWriteSize;78,2371
+    ULONG64 ullCurrentTime;79,2399
+    ULONG64 ullBootTime;80,2427
+    USHORT  usBlobOffset;81,2452
+    USHORT  usBlobLength;82,2478
+                             *PSMB2_NEGOTIATE_RESPONSE_HEADER;PSMB2_NEGOTIATE_RESPONSE_HEADER87,2607
+typedef struct __SMB2_SESSION_SETUP_REQUEST_HEADER89,2671
+    USHORT  usLength;91,2724
+    BYTE    ucVCNumber;92,2746
+    BYTE    ucSecurityMode;93,2770
+    ULONG   ulCapabilities;94,2798
+    ULONG   ulChannel;95,2826
+    USHORT  usBlobOffset;96,2849
+    USHORT  usBlobLength;97,2875
+    ULONG64 ullPrevSessionId;98,2901
+} __attribute__((__packed__)) SMB2_SESSION_SETUP_REQUEST_HEADER;102,2972
+typedef SMB2_SESSION_SETUP_REQUEST_HEADER *PSMB2_SESSION_SETUP_REQUEST_HEADER;PSMB2_SESSION_SETUP_REQUEST_HEADER104,3038
+typedef struct __SMB2_SESSION_SETUP_RESPONSE_HEADER106,3118
+    USHORT  usLength;108,3172
+    USHORT  usSessionFlags;109,3194
+    USHORT  usBlobOffset;110,3222
+    USHORT  usBlobLength;111,3248
+                             *PSMB2_SESSION_SETUP_RESPONSE_HEADER;PSMB2_SESSION_SETUP_RESPONSE_HEADER116,3381
+typedef struct __SMB2_LOGOFF_REQUEST_HEADER118,3449
+    USHORT usLength;120,3495
+    USHORT usReserved;121,3516
+                             *PSMB2_LOGOFF_REQUEST_HEADER;PSMB2_LOGOFF_REQUEST_HEADER123,3597
+typedef struct __SMB2_LOGOFF_RESPONSE_HEADER125,3657
+    USHORT usLength;127,3704
+    USHORT usReserved;128,3725
+                             *PSMB2_LOGOFF_RESPONSE_HEADER;PSMB2_LOGOFF_RESPONSE_HEADER130,3807
+typedef struct __SMB2_TREE_CONNECT_REQUEST_HEADER132,3868
+    USHORT usLength;134,3920
+    USHORT usPad;135,3941
+    USHORT usPathOffset;136,3959
+    USHORT usPathLength;137,3984
+                             *PSMB2_TREE_CONNECT_REQUEST_HEADER;PSMB2_TREE_CONNECT_REQUEST_HEADER139,4073
+typedef struct __SMB2_TREE_CONNECT_RESPONSE_HEADER141,4139
+    USHORT usLength;143,4192
+    USHORT usShareType;144,4213
+    ULONG  ulShareFlags;145,4237
+    ULONG  ulShareCapabilities;146,4262
+    ULONG  ulShareAccessMask;147,4294
+                             *PSMB2_TREE_CONNECT_RESPONSE_HEADER;PSMB2_TREE_CONNECT_RESPONSE_HEADER149,4389
+typedef struct __SMB2_TREE_DISCONNECT_REQUEST_HEADER151,4456
+    USHORT usLength;153,4511
+    USHORT usReserved;154,4532
+                             *PSMB2_TREE_DISCONNECT_REQUEST_HEADER;PSMB2_TREE_DISCONNECT_REQUEST_HEADER156,4622
+typedef struct __SMB2_TREE_DISCONNECT_RESPONSE_HEADER158,4691
+    USHORT usLength;160,4747
+    USHORT usReserved;161,4768
+                             *PSMB2_TREE_DISCONNECT_RESPONSE_HEADER;PSMB2_TREE_DISCONNECT_RESPONSE_HEADER163,4859
+typedef struct __SMB2_CREATE_CONTEXT165,4929
+    ULONG  ulNextContextOffset;167,4968
+    USHORT usNameOffset;168,5000
+    USHORT usNameLength;169,5025
+    USHORT usReserved;170,5050
+    USHORT usDataOffset;171,5073
+    ULONG  ulDataLength;172,5098
+                             *PSMB2_CREATE_CONTEXT;PSMB2_CREATE_CONTEXT179,5257
+typedef struct __SRV_CREATE_CONTEXT181,5310
+    SMB2_CONTEXT_ITEM_TYPE contextItemType;183,5348
+    PCSTR                  pszName;184,5392
+    USHORT                 usNameLen;185,5428
+    ULONG                  ulDataLength;186,5466
+    PBYTE                  pData;187,5507
+} SRV_CREATE_CONTEXT, *PSRV_CREATE_CONTEXT;PSRV_CREATE_CONTEXT188,5541
+typedef struct __SMB2_CREATE_REQUEST_HEADER190,5586
+    USHORT  usLength;192,5632
+    UCHAR   ucSecurityFlags;193,5654
+    UCHAR   ucOplockLevel;194,5683
+    ULONG   ulImpersonationLevel;195,5710
+    ULONG64 ullCreateFlags;196,5744
+    ULONG64 ullReserved;197,5772
+    ULONG   ulDesiredAccess;198,5797
+    ULONG   ulFileAttributes;199,5826
+    ULONG   ulShareAccess;200,5856
+    ULONG   ulCreateDisposition;201,5883
+    ULONG   ulCreateOptions;202,5916
+    USHORT  usNameOffset;203,5945
+    USHORT  usNameLength;204,5971
+    ULONG   ulCreateContextOffset;205,5997
+    ULONG   ulCreateContextLength;206,6032
+                             *PSMB2_CREATE_REQUEST_HEADER;PSMB2_CREATE_REQUEST_HEADER208,6125
+typedef struct __SMB2_CREATE_RESPONSE_HEADER210,6185
+    USHORT   usLength;212,6232
+    UCHAR    ucOplockLevel;213,6255
+    UCHAR    ucReserved;214,6283
+    ULONG    ulCreateAction;215,6308
+    ULONG64  ullCreationTime;216,6337
+    ULONG64  ullLastAccessTime;217,6367
+    ULONG64  ullLastWriteTime;218,6399
+    ULONG64  ullLastChangeTime;219,6430
+    ULONG64  ullAllocationSize;220,6462
+    ULONG64  ullEndOfFile;221,6494
+    ULONG    ulFileAttributes;222,6521
+    ULONG    ulReserved2;223,6552
+    SMB2_FID fid;224,6578
+    ULONG    ulCreateContextOffset;225,6596
+    ULONG    ulCreateContextLength;226,6632
+                             *PSMB2_CREATE_RESPONSE_HEADER;PSMB2_CREATE_RESPONSE_HEADER228,6727
+typedef struct __SMB2_MAXIMAL_ACCESS_MASK_CREATE_CONTEXT230,6788
+    ULONG       ulQueryStatus;232,6847
+    ACCESS_MASK accessMask;233,6878
+                             *PSMB2_MAXIMAL_ACCESS_MASK_CREATE_CONTEXT;PSMB2_MAXIMAL_ACCESS_MASK_CREATE_CONTEXT235,6978
+typedef struct __SMB2_CLOSE_REQUEST_HEADER237,7051
+    USHORT   usLength;239,7096
+    USHORT   usFlags;240,7119
+    ULONG    ulReserved;241,7141
+    SMB2_FID fid;242,7166
+                             *PSMB2_CLOSE_REQUEST_HEADER;PSMB2_CLOSE_REQUEST_HEADER244,7241
+typedef struct __SMB2_CLOSE_RESPONSE_HEADER246,7300
+    USHORT   usLength;248,7346
+    USHORT   usFlags;249,7369
+    ULONG    ulReserved;250,7391
+    ULONG64  ullCreationTime;251,7416
+    ULONG64  ullLastAccessTime;252,7446
+    ULONG64  ullLastWriteTime;253,7478
+    ULONG64  ullLastChangeTime;254,7509
+    ULONG64  ullAllocationSize;255,7541
+    ULONG64  ullEndOfFile;256,7573
+    ULONG    ulFileAttributes;257,7600
+                             *PSMB2_CLOSE_RESPONSE_HEADER;PSMB2_CLOSE_RESPONSE_HEADER259,7689
+typedef struct __SMB2_FLUSH_REQUEST_HEADER261,7749
+    USHORT   usLength;263,7794
+    USHORT   usFlags;264,7817
+    ULONG    ulReserved;265,7839
+    SMB2_FID fid;266,7864
+                             *PSMB2_FLUSH_REQUEST_HEADER;PSMB2_FLUSH_REQUEST_HEADER268,7939
+typedef struct __SMB2_FLUSH_RESPONSE_HEADER270,7998
+    USHORT   usLength;272,8044
+    USHORT   usReserved;273,8067
+                             *PSMB2_FLUSH_RESPONSE_HEADER;PSMB2_FLUSH_RESPONSE_HEADER275,8150
+typedef struct __SMB2_ECHO_REQUEST_HEADER277,8210
+    USHORT   usLength;279,8254
+    USHORT   usReserved;280,8277
+                             *PSMB2_ECHO_REQUEST_HEADER;PSMB2_ECHO_REQUEST_HEADER282,8358
+typedef struct __SMB2_ECHO_RESPONSE_HEADER284,8416
+    USHORT   usLength;286,8461
+    USHORT   usReserved;287,8484
+                             *PSMB2_ECHO_RESPONSE_HEADER;PSMB2_ECHO_RESPONSE_HEADER289,8566
+typedef struct __SMB2_GET_INFO_REQUEST_HEADER291,8625
+    USHORT   usLength;293,8673
+    UCHAR    ucInfoType;294,8696
+    UCHAR    ucInfoClass;295,8721
+    ULONG    ulOutputBufferLen;296,8747
+    USHORT   usInputBufferOffset;297,8779
+    USHORT   usReserved;298,8813
+    ULONG    ulInputBufferLen;299,8838
+    ULONG    ulAdditionalInfo;300,8869
+    ULONG    ulFlags;301,8900
+    SMB2_FID fid;302,8922
+                             *PSMB2_GET_INFO_REQUEST_HEADER;PSMB2_GET_INFO_REQUEST_HEADER305,9001
+typedef struct __SMB2_GET_INFO_RESPONSE_HEADER307,9063
+    USHORT usLength;309,9112
+    USHORT usOutBufferOffset;310,9133
+    ULONG  ulOutBufferLength;311,9163
+                             *PSMB2_GET_INFO_RESPONSE_HEADER;PSMB2_GET_INFO_RESPONSE_HEADER314,9255
+typedef struct __SMB2_SET_INFO_REQUEST_HEADER316,9318
+    USHORT   usLength;318,9366
+    UCHAR    ucInfoType;319,9389
+    UCHAR    ucInfoClass;320,9414
+    ULONG    ulInputBufferLen;321,9440
+    USHORT   usInputBufferOffset;322,9471
+    USHORT   usReserved;323,9505
+    ULONG    ulAdditionalInfo;324,9530
+    SMB2_FID fid;325,9561
+                             *PSMB2_SET_INFO_REQUEST_HEADER;PSMB2_SET_INFO_REQUEST_HEADER328,9640
+typedef struct __SMB2_SET_INFO_RESPONSE_HEADER330,9702
+    USHORT usLength;332,9751
+                             *PSMB2_SET_INFO_RESPONSE_HEADER;PSMB2_SET_INFO_RESPONSE_HEADER335,9834
+typedef struct __SMB2_WRITE_REQUEST_HEADER337,9897
+    USHORT   usLength;339,9942
+    USHORT   usDataOffset;340,9965
+    ULONG    ulDataLength;341,9992
+    ULONG64  ullFileOffset;342,10019
+    SMB2_FID fid;343,10047
+    ULONG    ulRemaining;344,10065
+    ULONG    ulChannel;345,10091
+    USHORT   usWriteChannelInfoOffset;346,10115
+    USHORT   usWriteChannelInfoLength;347,10154
+    ULONG    ulFlags;348,10193
+                             *PSMB2_WRITE_REQUEST_HEADER;PSMB2_WRITE_REQUEST_HEADER351,10273
+typedef struct __SMB2_WRITE_RESPONSE_HEADER353,10332
+    USHORT   usLength;355,10378
+    USHORT   usReserved;356,10401
+    ULONG    ulBytesWritten;357,10426
+    ULONG    ulBytesRemaining;358,10455
+    USHORT   usWriteChannelInfoOffset;359,10486
+    USHORT   usWriteChannelInfoLength;360,10525
+                             *PSMB2_WRITE_RESPONSE_HEADER;PSMB2_WRITE_RESPONSE_HEADER363,10623
+typedef struct __SMB2_READ_REQUEST_HEADER365,10683
+    USHORT   usLength;367,10727
+    USHORT   usReserved;368,10750
+    ULONG    ulDataLength;369,10775
+    ULONG64  ullFileOffset;370,10802
+    SMB2_FID fid;371,10830
+    ULONG    ulMinimumCount;372,10848
+    ULONG    ulChannel;373,10877
+    USHORT   usReadChannelInfoOffset;374,10901
+    USHORT   usReadChannelInfoLength;375,10939
+                             *PSMB2_READ_REQUEST_HEADER;PSMB2_READ_REQUEST_HEADER378,11034
+typedef struct __SMB2_READ_RESPONSE_HEADER380,11092
+    USHORT usLength;382,11137
+    USHORT usDataOffset;383,11158
+    ULONG  ulDataLength;384,11183
+    ULONG  ulRemaining;385,11208
+    ULONG  ulReserved;386,11232
+                             *PSMB2_READ_RESPONSE_HEADER;PSMB2_READ_RESPONSE_HEADER389,11313
+typedef struct __SMB2_IOCTL_REQUEST_HEADER391,11372
+    USHORT   usLength;393,11417
+    USHORT   usReserved;394,11440
+    ULONG    ulFunctionCode;395,11465
+    SMB2_FID fid;396,11494
+    ULONG    ulInOffset;397,11512
+    ULONG    ulInLength;398,11537
+    ULONG    ulMaxInLength;399,11562
+    ULONG    ulOutOffset;400,11590
+    ULONG    ulOutLength;401,11616
+    ULONG    ulMaxOutLength;402,11642
+    ULONG    ulFlags;403,11671
+    ULONG    ulReserved;404,11693
+                             *PSMB2_IOCTL_REQUEST_HEADER;PSMB2_IOCTL_REQUEST_HEADER407,11776
+typedef struct __SMB2_IOCTL_RESPONSE_HEADER409,11835
+    USHORT   usLength;411,11881
+    USHORT   usReserved;412,11904
+    ULONG    ulFunctionCode;413,11929
+    SMB2_FID fid;414,11958
+    ULONG    ulInOffset;415,11976
+    ULONG    ulInLength;416,12001
+    ULONG    ulOutOffset;417,12026
+    ULONG    ulOutLength;418,12052
+    ULONG    ulFlags;419,12078
+    ULONG    ulReserved;420,12100
+                             *PSMB2_IOCTL_RESPONSE_HEADER;PSMB2_IOCTL_RESPONSE_HEADER423,12184
+typedef struct __SMB2_LOCK425,12244
+    LONG64 ullFileOffset;427,12273
+    LONG64 ullByteRange;428,12299
+    ULONG  ulFlags;429,12324
+    ULONG  ulReserved;430,12344
+} __attribute__((__packed__)) SMB2_LOCK, *PSMB2_LOCK;PSMB2_LOCK431,12367
+typedef struct __SMB2_LOCK_REQUEST_HEADER433,12422
+    USHORT    usLength;435,12466
+    USHORT    usLockCount;436,12490
+    ULONG     ulLockSequence;437,12517
+    SMB2_FID  fid;438,12547
+    SMB2_LOCK locks[locks439,12566
+                             *PSMB2_LOCK_REQUEST_HEADER;PSMB2_LOCK_REQUEST_HEADER441,12646
+typedef struct __SMB2_LOCK_RESPONSE_HEADER443,12704
+    USHORT    usLength;445,12749
+    USHORT    usReserved;446,12773
+                             *PSMB2_LOCK_RESPONSE_HEADER;PSMB2_LOCK_RESPONSE_HEADER448,12856
+typedef struct __SMB2_FIND_REQUEST_HEADER450,12916
+    USHORT   usLength;452,12960
+    UCHAR    ucInfoClass;453,12983
+    UCHAR    ucSearchFlags;454,13009
+    ULONG    ulFileIndex;455,13037
+    SMB2_FID fid;456,13063
+    USHORT   usFilenameOffset;457,13081
+    USHORT   usFilenameLength;458,13112
+    ULONG    ulOutBufferLength;459,13143
+                             *PSMB2_FIND_REQUEST_HEADER;PSMB2_FIND_REQUEST_HEADER464,13276
+typedef struct __SMB2_FIND_RESPONSE_HEADER466,13334
+    USHORT   usLength;468,13379
+    USHORT   usOutBufferOffset;469,13402
+    ULONG    ulOutBufferLength;470,13434
+                             *PSMB2_FIND_RESPONSE_HEADER;PSMB2_FIND_RESPONSE_HEADER475,13567
+typedef struct __SMB2_NOTIFY_RESPONSE_HEADER477,13626
+    USHORT   usLength;479,13673
+    USHORT   usOutBufferOffset;480,13696
+    ULONG    ulOutBufferLength;481,13728
+                             *PSMB2_NOTIFY_RESPONSE_HEADER;PSMB2_NOTIFY_RESPONSE_HEADER486,13853
+typedef struct __SMB2_OPLOCK_BREAK_HEADER488,13914
+    USHORT   usLength;490,13958
+    UCHAR    ucOplockLevel;491,13981
+    UCHAR    ucReserved;492,14009
+    ULONG    ulReserved;493,14034
+    SMB2_FID fid;494,14059
+                             *PSMB2_OPLOCK_BREAK_HEADER;PSMB2_OPLOCK_BREAK_HEADER496,14133
+typedef struct __SMB2_ERROR_RESPONSE_HEADER498,14191
+    USHORT usLength;500,14237
+    USHORT usReserved;501,14258
+    ULONG  ulByteCount;502,14281
+                             *PSMB2_ERROR_RESPONSE_HEADER;PSMB2_ERROR_RESPONSE_HEADER505,14392
+typedef struct _SMB2_FILE_ID_BOTH_DIR_INFO_HEADER507,14452
+    ULONG           ulNextEntryOffset;509,14504
+    ULONG           ulFileIndex;510,14543
+    LONG64          ullCreationTime;511,14576
+    LONG64          ullLastAccessTime;512,14613
+    LONG64          ullLastWriteTime;513,14652
+    LONG64          ullChangeTime;514,14690
+    LONG64          ullEndOfFile;515,14725
+    LONG64          ullAllocationSize;516,14759
+    FILE_ATTRIBUTES ulFileAttributes;517,14798
+    ULONG           ulFileNameLength;518,14836
+    ULONG           ulEaSize;519,14874
+    UCHAR           ucShortNameLength;520,14904
+    UCHAR           ucReserved1;521,14943
+    WCHAR           wszShortName[wszShortName522,14976
+    USHORT          usReserved2;523,15014
+    LONG64          llFileId;524,15047
+                             *PSMB2_FILE_ID_BOTH_DIR_INFO_HEADER;PSMB2_FILE_ID_BOTH_DIR_INFO_HEADER528,15182
+typedef struct _SMB2_FILE_ID_FULL_DIR_INFO_HEADER530,15249
+    ULONG           ulNextEntryOffset;532,15301
+    ULONG           ulFileIndex;533,15340
+    LONG64          ullCreationTime;534,15373
+    LONG64          ullLastAccessTime;535,15410
+    LONG64          ullLastWriteTime;536,15449
+    LONG64          ullChangeTime;537,15487
+    LONG64          ullEndOfFile;538,15522
+    LONG64          ullAllocationSize;539,15556
+    FILE_ATTRIBUTES ulFileAttributes;540,15595
+    ULONG           ulFileNameLength;541,15633
+    ULONG           ulEaSize;542,15671
+    ULONG           ulReserved;543,15701
+    LONG64          llFileId;544,15733
+                             *PSMB2_FILE_ID_FULL_DIR_INFO_HEADER;PSMB2_FILE_ID_FULL_DIR_INFO_HEADER548,15868
+typedef struct _SMB2_FILE_BOTH_DIR_INFO_HEADER550,15935
+    ULONG           ulNextEntryOffset;552,15984
+    ULONG           ulFileIndex;553,16023
+    LONG64          ullCreationTime;554,16056
+    LONG64          ullLastAccessTime;555,16093
+    LONG64          ullLastWriteTime;556,16132
+    LONG64          ullChangeTime;557,16170
+    LONG64          ullEndOfFile;558,16205
+    LONG64          ullAllocationSize;559,16239
+    FILE_ATTRIBUTES ulFileAttributes;560,16278
+    ULONG           ulFileNameLength;561,16316
+    ULONG           ulEaSize;562,16354
+    USHORT          usShortNameLength;563,16384
+    WCHAR           wszShortName[wszShortName564,16423
+                             *PSMB2_FILE_BOTH_DIR_INFO_HEADER;PSMB2_FILE_BOTH_DIR_INFO_HEADER568,16563
+typedef struct _SMB2_FILE_FULL_DIR_INFO_HEADER570,16627
+    ULONG           ulNextEntryOffset;572,16676
+    ULONG           ulFileIndex;573,16715
+    LONG64          ullCreationTime;574,16748
+    LONG64          ullLastAccessTime;575,16785
+    LONG64          ullLastWriteTime;576,16824
+    LONG64          ullChangeTime;577,16862
+    LONG64          ullEndOfFile;578,16897
+    LONG64          ullAllocationSize;579,16931
+    FILE_ATTRIBUTES ulFileAttributes;580,16970
+    ULONG           ulFileNameLength;581,17008
+    ULONG           ulEaSize;582,17046
+                             *PSMB2_FILE_FULL_DIR_INFO_HEADER;PSMB2_FILE_FULL_DIR_INFO_HEADER586,17178
+typedef struct _SMB2_FILE_DIRECTORY_INFO_HEADER588,17242
+    ULONG           ulNextEntryOffset;590,17292
+    ULONG           ulFileIndex;591,17331
+    LONG64          ullCreationTime;592,17364
+    LONG64          ullLastAccessTime;593,17401
+    LONG64          ullLastWriteTime;594,17440
+    LONG64          ullChangeTime;595,17478
+    LONG64          ullEndOfFile;596,17513
+    LONG64          ullAllocationSize;597,17547
+    FILE_ATTRIBUTES ulFileAttributes;598,17586
+    ULONG           ulFileNameLength;599,17624
+                             *PSMB2_FILE_DIRECTORY_INFO_HEADER;PSMB2_FILE_DIRECTORY_INFO_HEADER603,17765
+typedef struct _SMB2_FILE_NAMES_INFO_HEADER605,17830
+    ULONG           ulNextEntryOffset;607,17876
+    ULONG           ulFileIndex;608,17915
+    ULONG           ulFileNameLength;609,17948
+                             *PSMB2_FILE_NAMES_INFO_HEADER;PSMB2_FILE_NAMES_INFO_HEADER613,18085
+typedef struct _SMB2_FILE_ALL_INFORMATION_HEADER615,18146
+    LONG64          llCreationTime;617,18197
+    LONG64          llLastAccessTime;618,18270
+    LONG64          llLastWriteTime;619,18308
+    LONG64          llChangeTime;620,18345
+    FILE_ATTRIBUTES ulFileAttributes;621,18379
+    ULONG           ulReserved;622,18417
+    LONG64          ullAllocationSize;623,18449
+    LONG64          ullEndOfFile;624,18522
+    ULONG           ulNumberOfLinks;625,18556
+    UCHAR           ucDeletePending;626,18593
+    UCHAR           ucIsDirectory;627,18630
+    USHORT          usReserved;628,18665
+    ULONG64         ullIndexNumber;629,18697
+    ULONG           ulEaSize;630,18770
+    ULONG           ulAccessMask;631,18843
+    ULONG64         ullCurrentByteOffset;632,18916
+    ULONG           ulMode;633,18989
+    ULONG           ulAlignment;634,19062
+    ULONG           ulFilenameLength;635,19135
+                             *PSMB2_FILE_ALL_INFORMATION_HEADER;PSMB2_FILE_ALL_INFORMATION_HEADER639,19312
+typedef struct _SMB2_FILE_RENAME_INFORMATION641,19378
+    UCHAR     ucReplaceIfExists;643,19425
+    UCHAR     ucReserved[ucReserved644,19458
+    ULONG64   ullRootDir;645,19487
+    ULONG     ulFileNameLength;646,19513
+    WCHAR     wszFileName[wszFileName647,19545
+                             *PSMB2_FILE_RENAME_INFO_HEADER;PSMB2_FILE_RENAME_INFO_HEADER650,19636
+typedef struct _SMB2_FILE_STREAM_INFORMATION_HEADER652,19698
+    ULONG   ulNextEntryOffset;654,19752
+    ULONG   ulStreamNameLength;655,19783
+    ULONG64 ullStreamSize;656,19815
+    LONG64  llStreamAllocationSize;657,19842
+                             *PSMB2_FILE_STREAM_INFORMATION_HEADER;PSMB2_FILE_STREAM_INFORMATION_HEADER659,19945
+typedef struct _SMB2_FILE_FULL_EA_INFORMATION_HEADER661,20014
+    ULONG  ulNextEntryOffset;663,20069
+    UCHAR  ucFlags;664,20099
+    UCHAR  ucEaNameLength;665,20119
+    USHORT usEaValueLength;666,20146
+                             *PSMB2_FILE_FULL_EA_INFORMATION_HEADER;PSMB2_FILE_FULL_EA_INFORMATION_HEADER670,20293
+typedef struct _SMB2_FILE_COMPRESSION_INFORMATION_HEADER672,20363
+    LONG64 llCompressedFileSize;674,20422
+    USHORT usCompressionFormat;675,20455
+    UCHAR  ucCompressionUnitShift;676,20487
+    UCHAR  ucChunkShift;677,20522
+    UCHAR  ucClusterShift;678,20547
+    UCHAR  ucReserved[ucReserved679,20574
+                             *PSMB2_FILE_COMPRESSION_INFORMATION_HEADER;PSMB2_FILE_COMPRESSION_INFORMATION_HEADER681,20672
+typedef struct _SMB2_FILE_NAME_INFORMATION683,20746
+    ULONG     ulFileNameLength;685,20791
+    WCHAR     FileName[FileName686,20823
+                             *PSMB2_FILE_NAME_INFORMATION;PSMB2_FILE_NAME_INFORMATION688,20907
+typedef struct _SMB2_FILE_NETWORK_OPEN_INFORMATION 690,20967
+    LONG64          llCreationTime;691,21020
+    LONG64          llLastAccessTime;692,21056
+    LONG64          llLastWriteTime;693,21094
+    LONG64          llChangeTime;694,21131
+    ULONG64         ullAllocationSize;695,21165
+    ULONG64         ullEndOfFile;696,21204
+    FILE_ATTRIBUTES ulFileAttributes;697,21238
+    ULONG           ulPad;698,21276
+                            *PSMB2_FILE_NETWORK_OPEN_INFORMATION;PSMB2_FILE_NETWORK_OPEN_INFORMATION700,21369
+    USHORT   usLength;704,21453
+    USHORT   usFlags;705,21476
+    ULONG    ulOutputBufferLength;706,21498
+    SMB2_FID fid;707,21533
+    ULONG    ulCompletionFilter;708,21551
+    ULONG    ulReserved;709,21584
+                             *PSMB2_NOTIFY_CHANGE_HEADER;PSMB2_NOTIFY_CHANGE_HEADER711,21666
+    SRV_TREE_CONNECT_STAGE_SMB_V2_INITIAL 715,21740
+    SRV_TREE_CONNECT_STAGE_SMB_V2_CREATE_TREE_ROOT_HANDLE,716,21787
+    SRV_TREE_CONNECT_STAGE_SMB_V2_BUILD_RESPONSE,717,21846
+    SRV_TREE_CONNECT_STAGE_SMB_V2_DONE718,21896
+} SRV_TREE_CONNECT_STAGE_SMB_V2;719,21935
+typedef struct _SRV_TREE_CONNECT_STATE_SMB_V2721,21969
+    LONG                          refCount;723,22017
+    pthread_mutex_t               mutex;725,22062
+    pthread_mutex_t*              pMutex;726,22103
+    SRV_TREE_CONNECT_STAGE_SMB_V2 stage;728,22146
+    IO_STATUS_BLOCK               ioStatusBlock;730,22188
+    IO_ASYNC_CONTROL_BLOCK        acb;732,22238
+    PIO_ASYNC_CONTROL_BLOCK       pAcb;733,22277
+    PSMB2_TREE_CONNECT_REQUEST_HEADER pRequestHeader;735,22318
+    PWSTR                         pwszPath;737,22388
+    PVOID                         pSecurityDescriptor;739,22433
+    PVOID                         pSecurityQOS;740,22488
+    PIO_ECP_LIST                  pEcpList;741,22536
+    PLWIO_SRV_SESSION_2           pSession;743,22581
+    PLWIO_SRV_TREE_2              pTree;744,22625
+    IO_FILE_NAME                  fileName;746,22667
+    struct sockaddr               clientAddress;748,22712
+    ULONG                         ulClientAddressLength;749,22761
+    BOOLEAN                       bRemoveTreeFromSession;751,22819
+} SRV_TREE_CONNECT_STATE_SMB_V2, *PSRV_TREE_CONNECT_STATE_SMB_V2;PSRV_TREE_CONNECT_STATE_SMB_V2753,22878
+typedef VOID (*PFN_SRV_MESSAGE_STATE_RELEASE_SMB_V2)PFN_SRV_MESSAGE_STATE_RELEASE_SMB_V2755,22945
+typedef struct _SRV_OPLOCK_INFO757,23015
+    UCHAR oplockRequest;759,23049
+    UCHAR oplockLevel;760,23074
+} SRV_OPLOCK_INFO, *PSRV_OPLOCK_INFO;PSRV_OPLOCK_INFO761,23097
+typedef struct _SRV_OPLOCK_STATE_SMB_V2763,23136
+    LONG                    refCount;765,23178
+    pthread_mutex_t         mutex;767,23217
+    pthread_mutex_t*        pMutex;768,23252
+    IO_STATUS_BLOCK         ioStatusBlock;770,23289
+    IO_ASYNC_CONTROL_BLOCK  acb;772,23333
+    PIO_ASYNC_CONTROL_BLOCK pAcb;773,23366
+    PLWIO_SRV_CONNECTION    pConnection;775,23401
+    ULONG64                 ullUid;777,23443
+    ULONG64                 ulTid;778,23479
+    SMB2_FID                fid;780,23515
+    BOOLEAN                 bBreakRequestSent;781,23548
+    PSRV_TIMER_REQUEST      pTimerRequest;783,23596
+    IO_FSCTL_OPLOCK_REQUEST_INPUT_BUFFER   oplockBuffer_in;785,23640
+    IO_FSCTL_OPLOCK_REQUEST_OUTPUT_BUFFER  oplockBuffer_out;786,23700
+    IO_FSCTL_OPLOCK_BREAK_ACK_INPUT_BUFFER oplockBuffer_ack;787,23761
+} SRV_OPLOCK_STATE_SMB_V2, *PSRV_OPLOCK_STATE_SMB_V2;PSRV_OPLOCK_STATE_SMB_V2789,23823
+    SRV_CREATE_STAGE_SMB_V2_INITIAL 793,23893
+    SRV_CREATE_STAGE_SMB_V2_CREATE_FILE_COMPLETED,794,23934
+    SRV_CREATE_STAGE_SMB_V2_ATTEMPT_QUERY_INFO,795,23985
+    SRV_CREATE_STAGE_SMB_V2_QUERY_CREATE_CONTEXTS,796,24033
+    SRV_CREATE_STAGE_SMB_V2_QUERY_INFO_COMPLETED,797,24084
+    SRV_CREATE_STAGE_SMB_V2_REQUEST_OPLOCK,798,24134
+    SRV_CREATE_STAGE_SMB_V2_DONE799,24178
+} SRV_CREATE_STAGE_SMB_V2;800,24211
+typedef struct _SRV_CREATE_STATE_SMB_V2802,24239
+    LONG                         refCount;804,24281
+    pthread_mutex_t              mutex;806,24325
+    pthread_mutex_t*             pMutex;807,24365
+    SRV_CREATE_STAGE_SMB_V2      stage;809,24407
+    PSMB2_CREATE_REQUEST_HEADER  pRequestHeader;811,24448
+    PWSTR                        pwszFilename;813,24513
+    IO_STATUS_BLOCK              ioStatusBlock;815,24561
+    IO_ASYNC_CONTROL_BLOCK       acb;817,24610
+    PIO_ASYNC_CONTROL_BLOCK      pAcb;818,24648
+    PSECURITY_DESCRIPTOR_RELATIVE pSecurityDescriptor;820,24688
+    PVOID                         pSecurityQOS;821,24758
+    PIO_FILE_NAME                 pFilename;822,24806
+    PIO_ECP_LIST                  pEcpList;823,24851
+    IO_FILE_HANDLE                hFile;824,24895
+    PSRV_CREATE_CONTEXT          pCreateContexts;826,24937
+    ULONG                        iContext;827,24987
+    ULONG                        ulNumContexts;828,25030
+    PSRV_CREATE_CONTEXT          pExtAContext;830,25079
+    FILE_BASIC_INFORMATION       fileBasicInfo;832,25127
+    PFILE_BASIC_INFORMATION      pFileBasicInfo;833,25175
+    FILE_STANDARD_INFORMATION    fileStdInfo;835,25225
+    PFILE_STANDARD_INFORMATION   pFileStdInfo;836,25271
+    FILE_PIPE_INFORMATION        filePipeInfo;838,25319
+    PFILE_PIPE_INFORMATION       pFilePipeInfo;839,25366
+    FILE_PIPE_LOCAL_INFORMATION  filePipeLocalInfo;841,25415
+    PFILE_PIPE_LOCAL_INFORMATION pFilePipeLocalInfo;842,25467
+    ACCESS_MASK                  ulMaximalAccessMask;844,25521
+    FILE_CREATE_RESULT           ulCreateAction;846,25576
+    UCHAR                        ucOplockLevel;848,25626
+    PLWIO_SRV_TREE_2             pTree;850,25675
+    PLWIO_SRV_FILE_2             pFile;851,25715
+    BOOLEAN                      bRemoveFileFromTree;852,25755
+    ULONG64                      ullAsyncId;854,25810
+} SRV_CREATE_STATE_SMB_V2, *PSRV_CREATE_STATE_SMB_V2;PSRV_CREATE_STATE_SMB_V2856,25856
+    SRV_FLUSH_STAGE_SMB_V2_INITIAL 860,25926
+    SRV_FLUSH_STAGE_SMB_V2_FLUSH_COMPLETED,861,25966
+    SRV_FLUSH_STAGE_SMB_V2_BUILD_RESPONSE,862,26010
+    SRV_FLUSH_STAGE_SMB_V2_DONE863,26053
+} SRV_FLUSH_STAGE_SMB_V2;864,26085
+typedef struct _SRV_FLUSH_STATE_SMB_V2866,26112
+    LONG                      refCount;868,26153
+    pthread_mutex_t           mutex;870,26194
+    pthread_mutex_t*          pMutex;871,26231
+    SRV_FLUSH_STAGE_SMB_V2    stage;873,26270
+    IO_STATUS_BLOCK           ioStatusBlock;875,26308
+    IO_ASYNC_CONTROL_BLOCK    acb;877,26354
+    PIO_ASYNC_CONTROL_BLOCK   pAcb;878,26389
+    PSMB2_FID                 pFid;880,26426
+    PLWIO_SRV_FILE_2          pFile;882,26478
+} SRV_FLUSH_STATE_SMB_V2, *PSRV_FLUSH_STATE_SMB_V2;PSRV_FLUSH_STATE_SMB_V2884,26516
+    SRV_READ_STAGE_SMB_V2_INITIAL 888,26584
+    SRV_READ_STAGE_SMB_V2_ATTEMPT_READ,889,26623
+    SRV_READ_STAGE_SMB_V2_ATTEMPT_READ_COMPLETED,890,26663
+    SRV_READ_STAGE_SMB_V2_BUILD_RESPONSE,891,26713
+    SRV_READ_STAGE_SMB_V2_ZCT_COMPLETE,892,26755
+    SRV_READ_STAGE_SMB_V2_DONE893,26795
+} SRV_READ_STAGE_SMB_V2;894,26826
+typedef struct _SRV_READ_STATE_SMB_V2896,26852
+    LONG                      refCount;898,26892
+    pthread_mutex_t           mutex;900,26933
+    pthread_mutex_t*          pMutex;901,26970
+    SRV_READ_STAGE_SMB_V2     stage;903,27009
+    IO_STATUS_BLOCK           ioStatusBlock;905,27047
+    IO_ASYNC_CONTROL_BLOCK    acb;907,27093
+    PIO_ASYNC_CONTROL_BLOCK   pAcb;908,27128
+    PLWIO_SRV_FILE_2          pFile;910,27165
+    ULONG                     ulBytesRead;912,27203
+    ULONG                     ulRemaining;913,27246
+    PSMB2_READ_REQUEST_HEADER pRequestHeader;915,27290
+    LONG64                    llByteOffset;918,27374
+    LONG                      ulBytesToRead;919,27418
+    PBYTE                     pData;920,27463
+    ULONG                     ulKey;921,27500
+    BOOLEAN                   bStartedRead;924,27558
+    PLW_ZCT_VECTOR            pZct;925,27602
+    PVOID                     pZctCompletion;926,27638
+} SRV_READ_STATE_SMB_V2, *PSRV_READ_STATE_SMB_V2;PSRV_READ_STATE_SMB_V2928,27685
+typedef struct _SRV_ZCT_WRITE_STATE_SMB_V2 930,27736
+    ULONG ulDataBytesMissing;931,27781
+    ULONG ulDataBytesResident;932,27811
+    ULONG ulSkipBytes;933,27842
+    PLW_ZCT_VECTOR pZct;934,27865
+    PVOID pZctCompletion;935,27890
+    PVOID pPadding;936,27916
+    ULONG ulPaddingSize;937,27936
+    PLWIO_SRV_CONNECTION pPausedConnection;938,27961
+} SRV_ZCT_WRITE_STATE_SMB_V2, *PSRV_ZCT_WRITE_STATE_SMB_V2;PSRV_ZCT_WRITE_STATE_SMB_V2939,28005
+    SRV_WRITE_STAGE_SMB_V2_INITIAL 943,28081
+    SRV_WRITE_STAGE_SMB_V2_ATTEMPT_WRITE,944,28121
+    SRV_WRITE_STAGE_SMB_V2_ZCT_IO,945,28163
+    SRV_WRITE_STAGE_SMB_V2_ZCT_COMPLETE,946,28198
+    SRV_WRITE_STAGE_SMB_V2_BUILD_RESPONSE,947,28239
+    SRV_WRITE_STAGE_SMB_V2_DONE948,28282
+} SRV_WRITE_STAGE_SMB_V2;949,28314
+typedef struct _SRV_WRITE_STATE_SMB_V2951,28341
+    LONG                       refCount;953,28382
+    pthread_mutex_t            mutex;955,28424
+    pthread_mutex_t*           pMutex;956,28462
+    SRV_WRITE_STAGE_SMB_V2     stage;958,28502
+    IO_STATUS_BLOCK            ioStatusBlock;960,28541
+    IO_ASYNC_CONTROL_BLOCK     acb;962,28588
+    PIO_ASYNC_CONTROL_BLOCK    pAcb;963,28624
+    PLWIO_SRV_FILE_2           pFile;965,28662
+    PSMB2_WRITE_REQUEST_HEADER pRequestHeader;967,28701
+    PBYTE                      pData;968,28763
+    LONG64                     llOffset;969,28825
+    ULONG                      ulLength;970,28866
+    ULONG                      ulKey;971,28907
+    ULONG                      ulBytesWritten;972,28945
+    BOOLEAN bStartedIo;974,28993
+    SRV_ZCT_WRITE_STATE_SMB_V2 Zct;977,29041
+} SRV_WRITE_STATE_SMB_V2, *PSRV_WRITE_STATE_SMB_V2;PSRV_WRITE_STATE_SMB_V2979,29078
+    SRV_GET_INFO_STAGE_SMB_V2_INITIAL 983,29146
+    SRV_GET_INFO_STAGE_SMB_V2_ATTEMPT_IO,984,29189
+    SRV_GET_INFO_STAGE_SMB_V2_BUILD_RESPONSE,985,29231
+    SRV_GET_INFO_STAGE_SMB_V2_DONE986,29277
+} SRV_GET_INFO_STAGE_SMB_V2;987,29312
+typedef struct _SRV_GET_INFO_STATE_SMB_V2989,29342
+    LONG                          refCount;991,29386
+    pthread_mutex_t               mutex;993,29431
+    pthread_mutex_t*              pMutex;994,29472
+    SRV_GET_INFO_STAGE_SMB_V2     stage;996,29515
+    IO_STATUS_BLOCK               ioStatusBlock;998,29557
+    IO_ASYNC_CONTROL_BLOCK        acb;1000,29607
+    PIO_ASYNC_CONTROL_BLOCK       pAcb;1001,29646
+    PSMB2_GET_INFO_REQUEST_HEADER pRequestHeader;1003,29687
+    PLWIO_SRV_FILE_2              pFile;1005,29753
+    PBYTE                         pData2;1007,29795
+    ULONG                         ulDataLength;1008,29837
+    ULONG                         ulActualDataLength;1009,29885
+} SRV_GET_INFO_STATE_SMB_V2, *PSRV_GET_INFO_STATE_SMB_V2;PSRV_GET_INFO_STATE_SMB_V21011,29940
+    SRV_SET_INFO_STAGE_SMB_V2_INITIAL 1015,30014
+    SRV_SET_INFO_STAGE_SMB_V2_ATTEMPT_IO,1016,30057
+    SRV_SET_INFO_STAGE_SMB_V2_BUILD_RESPONSE,1017,30099
+    SRV_SET_INFO_STAGE_SMB_V2_DONE1018,30145
+} SRV_SET_INFO_STAGE_SMB_V2;1019,30180
+typedef struct _SRV_SET_INFO_STATE_SMB_V21021,30210
+    LONG                          refCount;1023,30254
+    pthread_mutex_t               mutex;1025,30299
+    pthread_mutex_t*              pMutex;1026,30340
+    SRV_SET_INFO_STAGE_SMB_V2     stage;1028,30383
+    IO_STATUS_BLOCK               ioStatusBlock;1030,30425
+    IO_ASYNC_CONTROL_BLOCK        acb;1032,30475
+    PIO_ASYNC_CONTROL_BLOCK       pAcb;1033,30514
+    PIO_ECP_LIST                  pEcpList;1034,30554
+    PSMB2_SET_INFO_REQUEST_HEADER pRequestHeader;1036,30599
+    PBYTE                         pData;1037,30664
+    PBYTE                         pSecurityDescriptor;1039,30730
+    PBYTE                         pSecurityQOS;1040,30785
+    IO_FILE_HANDLE                hDir;1041,30833
+    IO_FILE_NAME                  dirPath;1042,30873
+    PBYTE                         pData2;1044,30917
+    ULONG                         ulData2Length;1045,30959
+    PLWIO_SRV_FILE_2              pFile;1047,31009
+    PLWIO_SRV_FILE_2              pRootDir;1048,31050
+} SRV_SET_INFO_STATE_SMB_V2, *PSRV_SET_INFO_STATE_SMB_V2;PSRV_SET_INFO_STATE_SMB_V21050,31095
+    SRV_IOCTL_STAGE_SMB_V2_INITIAL 1054,31169
+    SRV_IOCTL_STAGE_SMB_V2_ATTEMPT_IO,1055,31209
+    SRV_IOCTL_STAGE_SMB_V2_BUILD_RESPONSE,1056,31248
+    SRV_IOCTL_STAGE_SMB_V2_DONE1057,31291
+} SRV_IOCTL_STAGE_SMB_V2;1058,31323
+typedef struct _SRV_IOCTL_STATE_SMB_V21060,31350
+    LONG                       refCount;1062,31391
+    pthread_mutex_t            mutex;1064,31433
+    pthread_mutex_t*           pMutex;1065,31471
+    SRV_IOCTL_STAGE_SMB_V2     stage;1067,31511
+    IO_STATUS_BLOCK            ioStatusBlock;1069,31550
+    IO_ASYNC_CONTROL_BLOCK     acb;1071,31597
+    PIO_ASYNC_CONTROL_BLOCK    pAcb;1072,31633
+    PSMB2_IOCTL_REQUEST_HEADER pRequestHeader;1074,31671
+    PBYTE                      pData;1075,31733
+    PLWIO_SRV_CONNECTION       pConnection;1077,31796
+    PLWIO_SRV_FILE_2           pFile;1078,31840
+    PBYTE                      pResponseBuffer;1080,31879
+    size_t                     sResponseBufferLen;1081,31927
+    ULONG                      ulResponseBufferLen;1082,31978
+} SRV_IOCTL_STATE_SMB_V2, *PSRV_IOCTL_STATE_SMB_V2;PSRV_IOCTL_STATE_SMB_V21084,32031
+typedef struct _SRV_NOTIFY_STATE_SMB_V21086,32084
+    LONG                    refCount;1088,32126
+    pthread_mutex_t         mutex;1090,32165
+    pthread_mutex_t*        pMutex;1091,32200
+    ULONG64                 ullAsyncId;1093,32237
+    IO_STATUS_BLOCK         ioStatusBlock;1095,32278
+    IO_ASYNC_CONTROL_BLOCK  acb;1097,32322
+    PIO_ASYNC_CONTROL_BLOCK pAcb;1098,32355
+    ULONG                   ulCompletionFilter;1100,32390
+    BOOLEAN                 bWatchTree;1101,32438
+    PLWIO_SRV_CONNECTION    pConnection;1103,32479
+    USHORT                  usEpoch;1105,32521
+    ULONG64                 ullSessionId;1106,32558
+    ULONG                   ulTid;1107,32600
+    ULONG                   ulPid;1108,32635
+    ULONG64                 ullCommandSequence;1109,32670
+    PLWIO_SRV_FILE_2        pFile;1111,32719
+    PBYTE                   pBuffer;1113,32755
+    ULONG                   ulBufferLength;1114,32792
+    ULONG                   ulBytesUsed;1115,32836
+    ULONG                   ulMaxBufferSize;1117,32878
+} SRV_NOTIFY_STATE_SMB_V2, *PSRV_NOTIFY_STATE_SMB_V2;PSRV_NOTIFY_STATE_SMB_V21119,32924
+    SRV_NOTIFY_STAGE_SMB_V2_INITIAL 1123,32994
+    SRV_NOTIFY_STAGE_SMB_V2_ATTEMPT_IO,1124,33035
+    SRV_NOTIFY_STAGE_SMB_V2_BUILD_RESPONSE,1125,33075
+    SRV_NOTIFY_STAGE_SMB_V2_DONE1126,33119
+} SRV_NOTIFY_STAGE_SMB_V2;1127,33152
+typedef struct _SRV_NOTIFY_REQUEST_STATE_SMB_V21129,33180
+    LONG                       refCount;1131,33230
+    pthread_mutex_t            mutex;1133,33272
+    pthread_mutex_t*           pMutex;1134,33310
+    SRV_NOTIFY_STAGE_SMB_V2    stage;1136,33350
+    IO_STATUS_BLOCK            ioStatusBlock;1138,33389
+    IO_ASYNC_CONTROL_BLOCK     acb;1140,33436
+    PIO_ASYNC_CONTROL_BLOCK    pAcb;1141,33472
+    PSMB2_NOTIFY_CHANGE_HEADER pRequestHeader;1143,33510
+    PLWIO_SRV_FILE_2           pFile;1145,33573
+    ULONG64                    ullAsyncId;1147,33612
+    PBYTE                      pResponseBuffer;1149,33656
+    size_t                     sResponseBufferLen;1150,33704
+    ULONG                      ulResponseBufferLen;1151,33755
+} SRV_NOTIFY_REQUEST_STATE_SMB_V2, *PSRV_NOTIFY_REQUEST_STATE_SMB_V2;PSRV_NOTIFY_REQUEST_STATE_SMB_V21153,33808
+    SRV_LOCK_STAGE_SMB_V2_INITIAL 1158,33895
+    SRV_LOCK_STAGE_SMB_V2_ATTEMPT_LOCK,1159,33934
+    SRV_LOCK_STAGE_SMB_V2_BUILD_RESPONSE,1160,33974
+    SRV_LOCK_STAGE_SMB_V2_DONE1161,34016
+} SRV_LOCK_STAGE_SMB_V2;1162,34047
+typedef struct _SRV_ASYNC_LOCK_REQUEST_STATE_SMB_V21164,34073
+    LONG                      refCount;1166,34127
+    pthread_mutex_t           mutex;1168,34168
+    pthread_mutex_t*          pMutex;1169,34205
+    SRV_LOCK_STAGE_SMB_V2     stage;1171,34244
+    ULONG64                   ullAsyncId;1173,34282
+    IO_STATUS_BLOCK           ioStatusBlock;1175,34325
+    IO_ASYNC_CONTROL_BLOCK    acb;1177,34371
+    PIO_ASYNC_CONTROL_BLOCK   pAcb;1178,34406
+    PSMB2_LOCK_REQUEST_HEADER pRequestHeader;1180,34443
+    ULONG                     ulTid;1182,34505
+    PLWIO_SRV_FILE_2          pFile;1183,34542
+    PSMB2_LOCK*               ppUnlockArray;1185,34580
+    ULONG                     ulNumUnlocks;1186,34625
+    ULONG                     iUnlock;1187,34669
+    BOOLEAN                   bUnlockPending;1188,34708
+    PSMB2_LOCK*               ppLockArray;1190,34755
+    ULONG                     ulNumLocks;1191,34798
+    ULONG                     iLock;1192,34840
+    BOOLEAN                   bLockPending;1193,34877
+    BOOLEAN                   bFailImmediately;1195,34922
+} SRV_ASYNC_LOCK_REQUEST_STATE_SMB_V2, *PSRV_ASYNC_LOCK_REQUEST_STATE_SMB_V2;PSRV_ASYNC_LOCK_REQUEST_STATE_SMB_V21197,34971
+typedef struct _SRV_LOCK_REQUEST_STATE_SMB_V21199,35050
+    LONG                      refCount;1201,35098
+    pthread_mutex_t           mutex;1203,35139
+    pthread_mutex_t*          pMutex;1204,35176
+    SRV_LOCK_STAGE_SMB_V2     stage;1206,35215
+    IO_STATUS_BLOCK           ioStatusBlock;1208,35253
+    IO_ASYNC_CONTROL_BLOCK    acb;1210,35299
+    PIO_ASYNC_CONTROL_BLOCK   pAcb;1211,35334
+    PSMB2_LOCK_REQUEST_HEADER pRequestHeader;1213,35371
+    ULONG                     ulTid;1215,35433
+    PLWIO_SRV_FILE_2          pFile;1217,35471
+    PSMB2_LOCK*               ppUnlockArray;1219,35509
+    ULONG                     ulNumUnlocks;1220,35554
+    ULONG                     iUnlock;1221,35598
+    BOOLEAN                   bUnlockPending;1222,35637
+    PSMB2_LOCK*               ppLockArray;1224,35684
+    ULONG                     ulNumLocks;1225,35727
+    ULONG                     iLock;1226,35769
+    BOOLEAN                   bLockPending;1227,35806
+    BOOLEAN                   bFailImmediately;1229,35851
+    ULONG64                   ullAsyncId;1231,35900
+} SRV_LOCK_REQUEST_STATE_SMB_V2, *PSRV_LOCK_REQUEST_STATE_SMB_V2;PSRV_LOCK_REQUEST_STATE_SMB_V21233,35943
+    SRV_CLOSE_STAGE_SMB_V2_INITIAL 1237,36025
+    SRV_CLOSE_STAGE_SMB_V2_ATTEMPT_IO,1238,36065
+    SRV_CLOSE_STAGE_SMB_V2_BUILD_RESPONSE,1239,36104
+    SRV_CLOSE_STAGE_SMB_V2_DONE1240,36147
+} SRV_CLOSE_STAGE_SMB_V2;1241,36179
+typedef struct _SRV_CLOSE_STATE_SMB_V21243,36206
+    LONG                       refCount;1245,36247
+    pthread_mutex_t            mutex;1247,36289
+    pthread_mutex_t*           pMutex;1248,36327
+    SRV_CLOSE_STAGE_SMB_V2     stage;1250,36367
+    IO_STATUS_BLOCK            ioStatusBlock;1252,36406
+    IO_ASYNC_CONTROL_BLOCK     acb;1254,36453
+    PIO_ASYNC_CONTROL_BLOCK    pAcb;1255,36489
+    PSMB2_CLOSE_REQUEST_HEADER pRequestHeader;1257,36527
+    FILE_BASIC_INFORMATION     fileBasicInfo;1259,36590
+    PFILE_BASIC_INFORMATION    pFileBasicInfo;1260,36636
+    FILE_STANDARD_INFORMATION  fileStdInfo;1262,36684
+    PFILE_STANDARD_INFORMATION pFileStdInfo;1263,36728
+    PLWIO_SRV_TREE_2           pTree;1265,36774
+    PLWIO_SRV_FILE_2           pFile;1266,36812
+} SRV_CLOSE_STATE_SMB_V2, *PSRV_CLOSE_STATE_SMB_V2;PSRV_CLOSE_STATE_SMB_V21268,36851
+typedef struct __SRV_MESSAGE_SMB_V21270,36904
+    PBYTE        pBuffer;1272,36942
+    PSMB2_HEADER pHeader;1273,36968
+    ULONG        ulHeaderSize;1274,36994
+    ULONG        ulMessageSize;1275,37025
+    ULONG        ulZctMessageSize;1276,37057
+    ULONG        ulBytesAvailable;1278,37093
+} SRV_MESSAGE_SMB_V2, *PSRV_MESSAGE_SMB_V2;PSRV_MESSAGE_SMB_V21280,37129
+typedef struct _SRV_EXEC_CONTEXT_SMB_V21282,37174
+    PSRV_MESSAGE_SMB_V2                  pRequests;1284,37216
+    ULONG                                ulNumRequests;1285,37268
+    ULONG                                iMsg;1286,37324
+    PLWIO_SRV_SESSION_2                  pSession;1288,37372
+    PLWIO_SRV_TREE_2                     pTree;1289,37423
+    PLWIO_SRV_FILE_2                     pFile;1290,37471
+    LONG                                 llNumSuccessfulCreates;1292,37520
+    NTSTATUS                             lastCloseStatus;1293,37585
+    HANDLE                               hState;1295,37644
+    PFN_SRV_MESSAGE_STATE_RELEASE_SMB_V2 pfnStateRelease;1296,37693
+    ULONG                                ulNumResponses;1298,37752
+    PSRV_MESSAGE_SMB_V2                  pResponses;1299,37809
+    PBYTE                                pErrorMessage;1301,37863
+    ULONG                                ulErrorMessageLength;1302,37919
+} SRV_EXEC_CONTEXT_SMB_V2;1304,37983
+typedef struct _SRV_RUNTIME_GLOBALS_SMB_V21306,38011
+    pthread_mutex_t      mutex;1308,38056
+    PSMB_PROD_CONS_QUEUE pWorkQueue;1310,38089
+    ULONG                ulOplockTimeout;1312,38127
+} SRV_RUNTIME_GLOBALS_SMB_V2, *PSRV_RUNTIME_GLOBALS_SMB_V2;PSRV_RUNTIME_GLOBALS_SMB_V21314,38170
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/read.c,543
+SrvProcessRead_SMB_V2(141,3154
+SrvBuildReadState_SMB_V2(350,9171
+SrvBuildZctReadState_SMB_V2(395,10073
+SrvAttemptReadIo_SMB_V2(452,11588
+SrvSendZctReadResponse_SMB_V2(569,15311
+SrvCompleteZctRead_SMB_V2(632,17336
+SrvPrepareReadStateAsync_SMB_V2(682,18514
+SrvExecuteReadAsyncCB_SMB_V2(699,18912
+SrvExecuteReadSendZctCB_SMB_V2(735,19973
+SrvReleaseReadStateAsync_SMB_V2(765,20953
+SrvReleaseReadStateHandle_SMB_V2(796,21642
+SrvReleaseReadState_SMB_V2(805,21789
+SrvFreeReadState_SMB_V2(817,21993
+SrvBuildReadResponse_SMB_V2(851,22611
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/getinfo.c,403
+SrvProcessGetInfo_SMB_V2(99,2477
+SrvBuildGetInfoState_SMB_V2(251,6753
+SrvQueryInfo_SMB_V2(296,7730
+SrvBuildGetInfoResponse_SMB_V2(339,8697
+SrvPrepareGetInfoStateAsync_SMB_V2(381,9671
+SrvExecuteGetInfoAsyncCB_SMB_V2(398,10101
+SrvReleaseGetInfoStateAsync_SMB_V2(433,11180
+SrvReleaseGetInfoStateHandle_SMB_V2(464,11903
+SrvReleaseGetInfoState_SMB_V2(474,12094
+SrvFreeGetInfoState_SMB_V2(486,12317
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/error.c,109
+SrvSetErrorMessage_SMB_V2(53,1693
+SrvFreeErrorMessage_SMB_V2(68,2067
+SrvBuildErrorResponse_SMB_V2(82,2351
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/libmain.c,466
+SrvProtocolInit_SMB_V2(71,1959
+SrvProtocolExecute_SMB_V2(88,2308
+SrvProtocolCloseFile_SMB_V2(294,9290
+SrvProcessRequestSpecific_SMB_V2(323,9789
+SrvSendInterimResponse_SMB_V2(574,15752
+SrvProtocolFreeContext_SMB_V2(606,16463
+SrvBuildInterimResponse_SMB_V2(649,17326
+SrvBuildExecContext_SMB_V2(763,20974
+SrvProtocolShutdown_SMB_V2(888,24530
+SrvGetCommandDescription_SMB_V2(903,24796
+        ULONG ulCommand;909,24881
+        PCSTR pszDescription;910,24906
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/negotiate.c,124
+SrvProcessNegotiate_SMB_V2(61,1919
+SrvBuildNegotiateResponse_SMB_V2(138,4237
+SrvMarshalNegotiateResponse_SMB_V2(216,6373
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/write.c,557
+SrvProcessWrite_SMB_V2(136,3142
+SrvBuildWriteState_SMB_V2(330,8811
+SrvExecuteWrite_SMB_V2(380,9904
+SrvExecuteWriteZctIo_SMB_V2(496,13393
+SrvExecuteWriteZctComplete_SMB_V2(576,15735
+SrvPrepareWriteStateAsync_SMB_V2(627,16993
+SrvExecuteWriteAsyncCB_SMB_V2(644,17401
+SrvExecuteWriteReceiveZctCB_SMB_V2(680,18470
+SrvReleaseWriteStateAsync_SMB_V2(716,19716
+SrvReleaseWriteStateHandle_SMB_V2(747,20416
+SrvReleaseWriteState_SMB_V2(756,20568
+SrvFreeWriteState_SMB_V2(768,20778
+SrvBuildWriteResponse_SMB_V2(808,21635
+SrvDetectZctWrite_SMB_V2(889,24367
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/connection.c,42
+SrvConnection2FindSession_SMB_V2(53,1703
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/externs.h,30
+#define __EXTERNS_H__51,1721
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/cancel.c,33
+SrvProcessCancel_SMB_V2(53,1695
+
+/work/samba/likewise/likewise-open-6.0.0.53010/lwio/server/srv/protocols/smb2/includes.h,0

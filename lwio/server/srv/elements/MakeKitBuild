@@ -1,0 +1,7 @@
+make()
+{
+   mk_group \
+       LIB="elements" \
+       SOURCES="*.c" \
+       INCLUDEDIRS="../../../include ../../../include/lwio ../include"
+}

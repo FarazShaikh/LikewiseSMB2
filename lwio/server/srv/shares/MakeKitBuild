@@ -1,0 +1,8 @@
+SUBDIRS="api regshare"
+
+make()
+{
+    mk_group \
+        GROUP=shares \
+        GROUPDEPS="api/api regshare/regshare"
+}

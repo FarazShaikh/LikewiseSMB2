@@ -1,0 +1,8 @@
+SUBDIRS="api smb1 smb2"
+
+make()
+{
+    mk_group \
+        GROUP=protocols \
+        GROUPDEPS="api/api smb1/smb1 smb2/smb2"
+}

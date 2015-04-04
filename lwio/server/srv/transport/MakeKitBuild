@@ -1,0 +1,8 @@
+SUBDIRS="threadpool"
+
+make()
+{
+    mk_group \
+        GROUP=transport \
+        GROUPDEPS=transport/threadpool
+}
