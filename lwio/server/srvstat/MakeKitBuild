@@ -1,0 +1,10 @@
+make()
+{
+    mk_dlo \
+        DLO=libsrv.stat \
+        SOURCES="*.c" \
+        INCLUDEDIRS=". ../include ../../include" \
+        HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
+        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \
+        SYMFILE="srvstat.sym"
+}

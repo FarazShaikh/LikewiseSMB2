@@ -71,7 +71,7 @@ typedef struct _SRV_STAT_CONNECTION_INFO
     /**
      * IP Address of the (remote) client.
      */
-    const struct sockaddr* pClientAddress;
+    struct sockaddr* pClientAddress, clientAddress;
     /**
      * Length of the client IP Address
      */
@@ -81,7 +81,7 @@ typedef struct _SRV_STAT_CONNECTION_INFO
      *
      * This is used to determine which network interface is being used.
      */
-    const struct sockaddr* pServerAddress;
+    struct sockaddr* pServerAddress, serverAddress;
     /**
      * Length of the server IP Address
      */
@@ -102,7 +102,7 @@ typedef struct _SRV_STAT_SESSION_INFO
     /**
      * User principal used to authenticate the connection.
      */
-    PCWSTR  pwszUserPrincipal;
+    PWSTR  pwszUserPrincipal;
     /**
      * User Id associated with the authentication credentials.
      */

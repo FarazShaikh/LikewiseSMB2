@@ -1,4 +1,4 @@
-DRIVERS="rdr dfs npfs pvfs srv"
+DRIVERS="rdr dfs npfs pvfs srv srvstat"
 SUBDIRS="iomgr smbcommon $DRIVERS lwiod"
 
 driver_enabled()
