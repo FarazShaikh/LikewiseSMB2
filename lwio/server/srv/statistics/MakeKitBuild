@@ -1,7 +1,7 @@
 make()
 {
    mk_group \
-       LIB="statistics" \
+       GROUP="statistics" \
        SOURCES="*.c" \
        INCLUDEDIRS="../../../include ../../../include/lwio ../include"
 }

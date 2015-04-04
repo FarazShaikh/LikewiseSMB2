@@ -505,6 +505,7 @@ SrvBuildSetInformationResponse(
     PSRV_SET_INFO_STATE_SMB_V1 pInfoState = NULL;
 
     pInfoState = (PSRV_SET_INFO_STATE_SMB_V1)pCtxSmb1->hState;
+    pInfoState = pInfoState;
 
     if (!pSmbResponse->ulSerialNum)
     {
@@ -552,6 +553,7 @@ SrvBuildSetInformationResponse(
     }
 
     pResponseHeader = (PSET_INFO_RESPONSE_HEADER)pOutBuffer;
+    pResponseHeader = pResponseHeader;
 
     // pOutBuffer       += sizeof(SET_INFO_RESPONSE_HEADER);
     // ulOffset         += sizeof(SET_INFO_RESPONSE_HEADER);

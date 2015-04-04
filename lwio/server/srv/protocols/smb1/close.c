@@ -171,6 +171,7 @@ SrvProcessCloseAndX(
 
                     ntStatus = WireSMBUTimetoNTTime(
                                 pCloseState->pRequestHeader->ulLastWriteTime,
+                                TRUE, // FRZ ??
                                 &pCloseState->fileBasicInfo.LastWriteTime);
                     BAIL_ON_NT_STATUS(ntStatus);
 

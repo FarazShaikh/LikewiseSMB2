@@ -470,7 +470,7 @@ SrvAttemptReadIo_SMB_V2(
                             0,
                             pReadState->pZct,
                             pReadState->ulBytesToRead,
-                            &pReadState->llByteOffset,
+                            (PULONG64)&pReadState->llByteOffset,
                             &pReadState->ulKey,
                             &pReadState->pZctCompletion);
             if (ntStatus == STATUS_NOT_SUPPORTED)
@@ -521,7 +521,7 @@ SrvAttemptReadIo_SMB_V2(
                             &pReadState->ioStatusBlock,
                             pReadState->pData,
                             pReadState->ulBytesToRead,
-                            &pReadState->llByteOffset,
+                            (PULONG64)&pReadState->llByteOffset,
                             &pReadState->ulKey);
             if (ntStatus == STATUS_END_OF_FILE)
             {

@@ -4,5 +4,5 @@ make()
 {
     mk_group \
         GROUP=transport \
-        GROUPDEPS=transport/threadpool
+        GROUPS=transport/threadpool
 }

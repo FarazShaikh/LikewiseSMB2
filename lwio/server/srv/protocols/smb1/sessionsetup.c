@@ -162,7 +162,7 @@ SrvProcessSessionSetup(
         {
             PBYTE pSessionBuffer = pSmbResponse->pBuffer + pSmbResponse->usHeaderSize;
 
-            ((PSESSION_SETUP_RESPONSE_HEADER)pSessionBuffer)->action = 0x1;
+            ((PSESSION_SETUP_RESPONSE_HEADER_WC_4)pSessionBuffer)->action = 0x1;
 
             SrvSessionSetUserFlags(pCtxSmb1->pSession, SMB_SESSION_FLAG_GUEST);
 
@@ -234,7 +234,7 @@ SrvUnmarshallSessionSetupRequest(
     )
 {
     NTSTATUS ntStatus = 0;
-    SESSION_SETUP_REQUEST_HEADER* pHeader = NULL; // Do not free
+    SESSION_SETUP_REQUEST_HEADER_WC_12* pHeader = NULL; // Do not free
     PBYTE pSecurityBlob    = NULL; // Do not free
     PWSTR pwszNativeOS     = NULL; // Do not free
     PWSTR pwszNativeLanMan = NULL; // Do not free
@@ -243,7 +243,7 @@ SrvUnmarshallSessionSetupRequest(
     ULONG ulOffset         = pSmbRequest->usHeaderSize;
     ULONG ulBytesAvailable = pSmbRequest->ulMessageSize - pSmbRequest->usHeaderSize;
 
-    ntStatus = UnmarshallSessionSetupRequest(
+    ntStatus = UnmarshallSessionSetupRequest_WC_12(
                     pBuffer,
                     ulBytesAvailable,
                     ulOffset % 2,
@@ -329,7 +329,7 @@ SrvMarshallSessionSetupResponse(
     ULONG                      iMsg         = pCtxSmb1->iMsg;
     PSRV_MESSAGE_SMB_V1        pSmbRequest  = &pCtxSmb1->pRequests[iMsg];
     PSRV_MESSAGE_SMB_V1        pSmbResponse = &pCtxSmb1->pResponses[iMsg];
-    SESSION_SETUP_RESPONSE_HEADER* pResponseHeader = NULL;
+    SESSION_SETUP_RESPONSE_HEADER_WC_4* pResponseHeader = NULL;
     PBYTE     pReplySecurityBlob = NULL;
     ULONG     ulReplySecurityBlobLength = 0;
     wchar16_t wszNativeOS[] = {'U', 'n', 'i', 'x', 0 };
@@ -389,18 +389,18 @@ SrvMarshallSessionSetupResponse(
 
     *pSmbResponse->pWordCount = 4;
 
-    if (ulBytesAvailable < sizeof(SESSION_SETUP_RESPONSE_HEADER))
+    if (ulBytesAvailable < sizeof(SESSION_SETUP_RESPONSE_HEADER_WC_3))
     {
         ntStatus = STATUS_INVALID_BUFFER_SIZE;
         BAIL_ON_NT_STATUS(ntStatus);
     }
 
-    pResponseHeader = (PSESSION_SETUP_RESPONSE_HEADER)pOutBuffer;
+    pResponseHeader = (PSESSION_SETUP_RESPONSE_HEADER_WC_4)pOutBuffer;
 
-    ulTotalBytesUsed += sizeof(SESSION_SETUP_RESPONSE_HEADER);
-    ulOffset         += sizeof(SESSION_SETUP_RESPONSE_HEADER);
-    ulBytesAvailable -= sizeof(SESSION_SETUP_RESPONSE_HEADER);
-    pOutBuffer       += sizeof(SESSION_SETUP_RESPONSE_HEADER);
+    ulTotalBytesUsed += sizeof(SESSION_SETUP_RESPONSE_HEADER_WC_4);
+    ulOffset         += sizeof(SESSION_SETUP_RESPONSE_HEADER_WC_4);
+    ulBytesAvailable -= sizeof(SESSION_SETUP_RESPONSE_HEADER_WC_4);
+    pOutBuffer       += sizeof(SESSION_SETUP_RESPONSE_HEADER_WC_4);
 
     /* TODO : change to native domain */
 

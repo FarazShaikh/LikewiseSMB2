@@ -643,6 +643,7 @@ SrvBuildFileSystemSizeInfoResponse_SMB_V2(
     pGetInfoState = (PSRV_GET_INFO_STATE_SMB_V2)pCtxSmb2->hState;
 
     pFSSizeInfo = (PFILE_FS_SIZE_INFORMATION)pGetInfoState->pData2;
+    pFSSizeInfo = pFSSizeInfo;
 
     ntStatus = SMB2MarshalHeader(
                     pOutBuffer,

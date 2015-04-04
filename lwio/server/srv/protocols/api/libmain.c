@@ -260,6 +260,7 @@ SrvProtocolExecute_SMB_V1_Filter(
                                     pSmbRequest->pSMBHeader->command,
                                     ntohl(pContext->pSmbResponse->pNetBIOSHeader->len),
                                     pContext->pSmbResponse->pSMBHeader->error);
+                    ntStatus2 = ntStatus2;
                 }
 
                 break;

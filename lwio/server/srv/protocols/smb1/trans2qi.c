@@ -1676,6 +1676,7 @@ SrvBuildQueryAllInfoResponse(
 
     pTrans2State = (PSRV_TRANS2_STATE_SMB_V1)pCtxSmb1->hState;
     pFileAllInfo = (PFILE_ALL_INFORMATION)pTrans2State->pData2;
+    pFileAllInfo = pFileAllInfo;
 
     if (!pSmbResponse->ulSerialNum)
     {
@@ -1972,6 +1973,7 @@ SrvBuildQueryNameInfoResponse(
 
     pTrans2State = (PSRV_TRANS2_STATE_SMB_V1)pCtxSmb1->hState;
     pFileNameInfo = (PFILE_NAME_INFORMATION)pTrans2State->pData2;
+    pFileNameInfo = pFileNameInfo;
 
     if (!pSmbResponse->ulSerialNum)
     {

@@ -935,7 +935,7 @@ srv_display_status_1(
         maj_stat = gss_display_status(&min_stat, code,
                                       type, GSS_C_NULL_OID,
                                       &msg_ctx, &msg);
-
+        maj_stat = maj_stat;
         switch(code)
         {
 #ifdef WIN32
@@ -1143,7 +1143,7 @@ SrvSetDefaultKrb5CachePath(
         }
     }
 
-    LWIO_LOG_DEBUG("Cache path set to [%s]", SMB_SAFE_LOG_STRING(pszCachePath));
+    LWIO_LOG_DEBUG("Cache path set to [%s]", pszCachePath == NULL ? "NULL":pszCachePath);
 
 cleanup:
 

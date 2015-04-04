@@ -1708,6 +1708,7 @@ SrvBuildChangeNotifyResponse(
     ULONG ulParameterLength    = 0;
 
     pNTTransactState = (PSRV_NTTRANSACT_STATE_SMB_V1)pCtxSmb1->hState;
+    pNTTransactState = pNTTransactState;
 
     if (!pSmbResponse->ulSerialNum)
     {

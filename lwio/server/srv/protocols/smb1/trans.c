@@ -1103,7 +1103,7 @@ SrvProcessTransactNamedPipe(
                             &pTransState->ioStatusBlock,
                             pTransState->pData,
                             pTransState->pRequestHeader->dataCount,
-                            &pTransState->llOffset,
+                            (PULONG64)&pTransState->llOffset,
                             NULL);
             BAIL_ON_NT_STATUS(ntStatus);
 

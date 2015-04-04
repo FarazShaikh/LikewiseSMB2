@@ -1566,6 +1566,7 @@ SrvClearLockAsyncState_inlock(
             (PSRV_BYTE_RANGE_LOCK_STATE_LIST)pFile->hCancellableBRLStateList;
 
         ntStatus2 = SrvTreeRemoveAsyncState(pTree, pLockState->ullAsyncId);
+        ntStatus2 = ntStatus2;
 
         pLockState->ullAsyncId = 0;
 
@@ -1589,6 +1590,7 @@ SrvExecuteLockRequest(
     pLockState        = (PSRV_LOCK_STATE_SMB_V1)pCtxSmb1->hState;
     bFailImmediately  = (pLockState->pRequestHeader->ulTimeout == 0);
     bWaitIndefinitely = (pLockState->pRequestHeader->ulTimeout == (ULONG)-1);
+    bWaitIndefinitely = bWaitIndefinitely;
 
     if (pLockState->bUnlockPending)
     {

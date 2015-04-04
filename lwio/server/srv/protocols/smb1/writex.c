@@ -423,7 +423,7 @@ SrvExecuteWriteAndX(
                             0,
                             pWriteState->zct.pZct,
                             pWriteState->ulLength,
-                            &pWriteState->llOffset,
+                            (PULONG64)&pWriteState->llOffset,
                             &pWriteState->ulKey,
                             &pWriteState->zct.pZctCompletion);
             if (ntStatus == STATUS_NOT_SUPPORTED)
@@ -487,7 +487,7 @@ SrvExecuteWriteAndX(
                             &pWriteState->ioStatusBlock,
                             pWriteState->pData,
                             pWriteState->ulLength,
-                            &pWriteState->llOffset,
+                            (PULONG64)&pWriteState->llOffset,
                             &pWriteState->ulKey);
             BAIL_ON_NT_STATUS(ntStatus);
 

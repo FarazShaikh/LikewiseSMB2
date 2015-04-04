@@ -505,6 +505,26 @@ LwIoFreeMemory(
     } while (0)
 
 DWORD
+SMBAllocateMemory(
+                  DWORD dwSize,
+                  PVOID * ppMemory
+                  );
+
+DWORD
+SMBReallocMemory(
+                 PVOID  pMemory,
+                 PVOID * ppNewMemory,
+                 DWORD dwSize
+                 );
+
+
+VOID
+SMBFreeMemory(
+    PVOID pMemory
+              );
+
+
+DWORD
 SMBAllocateString(
     PCSTR pszInputString,
     PSTR *ppszOutputString

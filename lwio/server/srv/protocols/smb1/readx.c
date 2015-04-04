@@ -696,7 +696,7 @@ SrvAttemptReadIo(
                             pReadState->bPagedIo ? IO_FLAG_PAGING_IO : 0,
                             pReadState->pZct,
                             pReadState->ulBytesToRead,
-                            &pReadState->llByteOffset,
+                            (PULONG64) &pReadState->llByteOffset,
                             &pReadState->ulKey,
                             &pReadState->pZctCompletion);
 
@@ -750,7 +750,7 @@ SrvAttemptReadIo(
                                 &pReadState->ioStatusBlock,
                                 pReadState->pData,
                                 pReadState->ulBytesToRead,
-                                &pReadState->llByteOffset,
+                                (PULONG64) &pReadState->llByteOffset,
                                 &pReadState->ulKey);
             }
             else
@@ -761,7 +761,7 @@ SrvAttemptReadIo(
                                 &pReadState->ioStatusBlock,
                                 pReadState->pData,
                                 pReadState->ulBytesToRead,
-                                &pReadState->llByteOffset,
+                                (PULONG64) &pReadState->llByteOffset,
                                 &pReadState->ulKey);
             }
             if (ntStatus == STATUS_END_OF_FILE)

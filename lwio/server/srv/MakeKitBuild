@@ -4,7 +4,7 @@ make()
 {
     mk_dlo \
         DLO=libsrv.sys \
-        GROUPDEPS="driver/driver utils/utils transport/transport statistics/statistics shares/shares protocols/protocols elements/elements" \
+        GROUPS="driver/driver utils/utils transport/transport statistics/statistics shares/shares protocols/protocols elements/elements" \
         INCLUDEDIRS=". ../include ../../include ../../../include ../../../include/lwio" \
         HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
         LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \

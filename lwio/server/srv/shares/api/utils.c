@@ -524,6 +524,7 @@ SrvShareFreeAbsoluteSecurityDescriptor(
 
     ntStatus = RtlGetDaclSecurityDescriptor(pSecDesc, &bPresent, &pDacl, &bDefaulted);
     ntStatus = RtlGetSaclSecurityDescriptor(pSecDesc, &bPresent, &pSacl, &bDefaulted);
+    ntStatus = ntStatus;
 
     RTL_FREE(&pSecDesc);
     RTL_FREE(&pOwner);

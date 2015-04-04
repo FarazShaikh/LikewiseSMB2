@@ -1,4 +1,4 @@
-SUBDIRS="include utils ipc logging_r common client server tools etc tests"
+SUBDIRS="include utils ipc logging_r common client server tools etc tests libshareinfo"
 
 option()
 {
@@ -141,5 +141,5 @@ configure()
 
     lw_check_pthread_once_init
 
-    mk_output_file "etc/lwiod.reg"
+    mk_output_file "etc/lwiod-srv.reg"
 }

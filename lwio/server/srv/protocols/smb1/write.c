@@ -391,7 +391,7 @@ SrvExecuteWrite(
                             0,
                             pWriteState->Zct.pZct,
                             pWriteState->ulLength,
-                            &pWriteState->llOffset,
+                            (PULONG64)&pWriteState->llOffset,
                             &pWriteState->ulKey,
                             &pWriteState->Zct.pZctCompletion);
             if (ntStatus == STATUS_NOT_SUPPORTED)
@@ -453,7 +453,7 @@ SrvExecuteWrite(
                             &pWriteState->ioStatusBlock,
                             pWriteState->pData,
                             pWriteState->ulLength,
-                            &pWriteState->llOffset,
+                            (PULONG64)&pWriteState->llOffset,
                             &pWriteState->ulKey);
             BAIL_ON_NT_STATUS(ntStatus);
 
@@ -964,6 +964,9 @@ SrvDetectZctWrite_SMB_V1(
     PSRV_EXEC_CONTEXT pExecContext = NULL;
     PSRV_WRITE_STATE_SMB_V1 pWriteState = NULL;
     PSRV_WRITEX_STATE_SMB_V1 pWriteXState = NULL;
+
+    bCanTryZct = bCanTryZct;
+    llOffset = llOffset;
 
     if (ulBytesAvailable < sizeof(SMB_HEADER))
     {

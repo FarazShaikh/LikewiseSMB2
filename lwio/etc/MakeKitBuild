@@ -2,5 +2,5 @@ make()
 {
     mk_stage \
         DESTDIR="${LW_CONFIGDIR}" \
-        lwiod.reg
+        lwiod-srv.reg
 }

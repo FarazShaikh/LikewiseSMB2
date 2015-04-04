@@ -1752,6 +1752,7 @@ SrvBuildFileAltNameInfoResponse_SMB_V2(
 
     pGetInfoState = (PSRV_GET_INFO_STATE_SMB_V2)pCtxSmb2->hState;
     pFileNameInfo = (PFILE_NAME_INFORMATION)pGetInfoState->pData2;
+    pFileNameInfo = pFileNameInfo;
 
     ntStatus = SMB2MarshalHeader(
                     pOutBuffer,
@@ -2072,6 +2073,7 @@ SrvBuildFileStreamInfoResponse_SMB_V2(
 
     pGetInfoState = (PSRV_GET_INFO_STATE_SMB_V2)pCtxSmb2->hState;
     pFileStreamInfo = (PFILE_STREAM_INFORMATION)pGetInfoState->pData2;
+    pFileStreamInfo = pFileStreamInfo;
 
     ntStatus = SMB2MarshalHeader(
                     pOutBuffer,
@@ -2360,6 +2362,7 @@ SrvBuildFileFullEAInfoResponse_SMB_V2(
 
     pGetInfoState = (PSRV_GET_INFO_STATE_SMB_V2)pCtxSmb2->hState;
     pFileFullEaInfo = (PFILE_FULL_EA_INFORMATION)pGetInfoState->pData2;
+    pFileFullEaInfo = pFileFullEaInfo;
 
     ntStatus = SMB2MarshalHeader(
                     pOutBuffer,
