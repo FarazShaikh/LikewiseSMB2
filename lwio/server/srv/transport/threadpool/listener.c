@@ -261,7 +261,7 @@ SrvListenerProcessTask(
         struct sockaddr_in6 Addr6;
 #endif
     } clientAddress;
-    SOCKLEN_T clientAddressLength = sizeof(clientAddress);
+    socklen_t clientAddressLength = sizeof(clientAddress);
     CHAR clientAddressStringBuffer[SRV_SOCKET_ADDRESS_STRING_MAX_SIZE] = {0};
 
     union
@@ -271,7 +271,7 @@ SrvListenerProcessTask(
         struct sockaddr_in6 Addr6;
 #endif
     } serverAddress;
-    SOCKLEN_T serverAddressLength = sizeof(serverAddress);
+    socklen_t serverAddressLength = sizeof(serverAddress);
     CHAR serverAddressStringBuffer[SRV_SOCKET_ADDRESS_STRING_MAX_SIZE] = {0};
     LW_TASK_EVENT_MASK waitMask = 0;
 

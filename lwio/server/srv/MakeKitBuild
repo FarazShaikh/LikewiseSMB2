@@ -7,6 +7,6 @@ make()
         GROUPS="driver/driver utils/utils transport/transport statistics/statistics shares/shares protocols/protocols elements/elements" \
         INCLUDEDIRS=". ../include ../../include ../../../include ../../../include/lwio" \
         HEADERDEPS="openssl/md5.h lw/base.h lwnet.h" \
-        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi" \
+        LIBDEPS="lwiosmbcommon iomgr lwnetclientapi lwioshareinfo" \
         SYMFILE="srv.sym"
 }

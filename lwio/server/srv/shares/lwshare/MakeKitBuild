@@ -1,0 +1,7 @@
+make()
+{
+   mk_group \
+       GROUP="lwshare" \
+       SOURCES="*.c" \
+       INCLUDEDIRS="../../include ../../../../include ../../../../include/lwio ../../../include ../../../include/lwio ../include"
+}
