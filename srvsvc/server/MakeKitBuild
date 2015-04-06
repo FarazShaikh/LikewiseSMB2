@@ -1,0 +1,70 @@
+make() {
+    SERVER_SOURCES="\
+        netsession.c                      \
+        utils.c                           \
+        srvsvc_netnamevalidate.c          \
+        srvsvc_netshareadd.c              \
+        winreg.c                          \
+        srvsvc_netservergetinfo.c         \
+        srvsvc_netsharedel.c              \
+        memutil.c                         \
+        netfile.c                         \
+        globals.c                         \
+        security.c                        \
+        signalhandler.c                   \
+        accesstoken.c                     \
+        winreg_srv.c                      \
+        main.c                            \
+        srvsvc_srv.c                      \
+        srvsvc_netsharesetinfo.c          \
+        config.c                          \
+        srvsvc_netsharegetinfo.c          \
+        srvsvc.c                          \
+        srvsvc_netshareenum.c             \
+        marshall.c"
+
+    #srvsvc stub
+    lw_dceidl \
+       IDL=../idl/srvsvc.idl \
+       INCLUDEDIRS=". .. ../include ../idl" \
+       HEADER="srvsvc_h.h" \
+       CSTUB="srvsvc_cstub.c" \
+       SSTUB="srvsvc_sstub.c" \
+       HEADERDEPS="lw/base.h"
+
+    mk_group \
+        GROUP=srvsvc_stub \
+        CPPFLAGS="-DDCERPC_STUB_BUILD" \
+        SOURCES="srvsvc_sstub.c" \
+        INCLUDEDIRS=". ../../../include" \
+        HEADERDEPS="dce/rpc.h" \
+        LIBDEPS="dcerpc"
+
+    #winreg stub
+    lw_dceidl \
+       IDL=../idl/winreg.idl \
+       INCLUDEDIRS=". .. ../include ../idl" \
+       HEADER="winreg_h.h" \
+       CSTUB="winreg_cstub.c" \
+       SSTUB="winreg_sstub.c" \
+       HEADERDEPS="lw/base.h"
+
+    mk_group \
+        GROUP=winreg_stub \
+        CPPFLAGS="-DDCERPC_STUB_BUILD" \
+        SOURCES="winreg_sstub.c" \
+        INCLUDEDIRS=". ../../../include" \
+        HEADERDEPS="dce/rpc.h" \
+        LIBDEPS="dcerpc"
+
+
+    mk_group \
+       GROUP="server" \
+       GROUPS="srvsvc_stub winreg_stub" \
+       CPPFLAGS="-DDCERPC_STUB_BUILD" \
+       SOURCES="$SERVER_SOURCES     winreg_sstub.c   srvsvc_sstub.c" \
+       INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
+       HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \
+       DEPS="srvsvc_h.h winreg_h.h" \
+       LIBDEPS="lwioshareinfo"
+}

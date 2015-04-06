@@ -1,0 +1,50 @@
+make()
+{
+    CLIENT_SOURCES="\
+       netr_connectionenum.c     \
+       srvsvc_binding.c          \
+       netr_fileenum.c           \
+       netr_filegetinfo.c        \
+       netr_fileclose.c          \
+       netr_sessiondel.c         \
+       netr_sessionenum.c        \
+       netr_shareadd.c           \
+       netr_shareenum.c          \
+       netr_sharegetinfo.c       \
+       netr_sharesetinfo.c       \
+       netr_sharedel.c           \
+       netr_servergetinfo.c      \
+       netr_serversetinfo.c      \
+       netr_remotetod.c          \
+       srvsvc_memory.c           \
+       srvsvc_stubmemory.c       \
+       memptr.c                  \
+       globals.c"
+
+    lw_dceidl \
+       IDL=../idl/srvsvc.idl \
+       INCLUDEDIRS=". .. ../include ../idl" \
+       HEADER="srvsvc_h.h" \
+       CSTUB="srvsvc_cstub.c" \
+       SSTUB="srvsvc_sstub.c" \
+       HEADERDEPS="lw/base.h"
+
+#    IDLFLAGS="-keep c_source -header srvsvc_h.h" \
+#    IDLFLAGS="-cstub_pref cli_ -sstub_pref srv_" \
+
+    mk_group \
+        GROUP=srvsvc_stub \
+        SOURCES="srvsvc_cstub.c" \
+        CPPFLAGS="-DDCERPC_STUB_BUILD" \
+        INCLUDEDIRS=". ../../../include" \
+        HEADERDEPS="dce/rpc.h" \
+        LIBDEPS="dcerpc"
+
+    mk_group \
+        GROUP=client \
+        GROUPS="srvsvc_stub" \
+        SOURCES="$CLIENT_SOURCES" \
+        INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
+        HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \
+        DEPS="srvsvc_h.h"
+}

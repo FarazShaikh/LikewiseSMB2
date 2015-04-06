@@ -1,0 +1,37 @@
+[HKEY_THIS_MACHINE\Services]
+
+[HKEY_THIS_MACHINE\Services\srvsvc]
+"Description" = {
+   default = "Likewise Server Service"
+   doc = ""
+}
+
+"Path" = {
+   default = "/opt/likewise/sbin/srvsvcd"
+    doc = ""
+}
+
+"Arguments" = {
+    default = "/opt/likewise/sbin/srvsvcd --syslog"
+    doc = ""
+}
+
+"Environment" = {
+    default = ""
+    doc = ""
+}
+
+"Dependencies" = {
+    default = "dcerpc lwio srv npfs"
+    doc = ""
+}
+
+"Autostart" = {
+    default = dword:00000001
+    doc = ""
+}
+
+"Type" = {
+    default = dword:00000001
+    doc = ""
+}
