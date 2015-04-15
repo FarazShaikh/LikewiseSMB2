@@ -323,6 +323,12 @@
     doc = "" 
 }
 
+[HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\dfs]
+"Path" = { 
+    default = "@providerdir@/libdfs.sys@MOD_EXT@" 
+    doc = "" 
+}
+
 [HKEY_THIS_MACHINE\Software\Likewise\lwiosrvstat]
 "Target" = { 
     default = "file" 

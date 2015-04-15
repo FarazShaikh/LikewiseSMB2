@@ -1,10 +1,9 @@
 [HKEY_THIS_MACHINE\Services]
 
-[HKEY_THIS_MACHINE\Services\srvsvc]
+HKEY_THIS_MACHINE\Services\srvsvc]
 "Description" = {
    default = "Likewise Server Service"
    doc = ""
-}
 
 "Path" = {
    default = "/opt/likewise/sbin/srvsvcd"
@@ -27,7 +26,7 @@
 }
 
 "Autostart" = {
-    default = dword:00000001
+    default = dword:00000000
     doc = ""
 }
 
