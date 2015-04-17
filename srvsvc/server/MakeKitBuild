@@ -61,7 +61,6 @@ make() {
     mk_group \
        GROUP="server" \
        GROUPS="srvsvc_stub winreg_stub" \
-       CPPFLAGS="-DDCERPC_STUB_BUILD" \
        SOURCES="$SERVER_SOURCES     winreg_sstub.c   srvsvc_sstub.c" \
        INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
        HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \

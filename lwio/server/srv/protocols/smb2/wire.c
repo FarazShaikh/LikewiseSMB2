@@ -1038,6 +1038,7 @@ SMB2MarshalCreateContext(
 
     pCreateContext->usNameOffset = usOffset_struct;
     pCreateContext->usNameLength = usNameSize;
+    pCreateContext->usReserved = 0;
     memcpy(pDataCursor, pName, usNameSize);
 
     ulOffset          += usNameSize;
@@ -1058,6 +1059,7 @@ SMB2MarshalCreateContext(
                 BAIL_ON_NT_STATUS(ntStatus);
             }
 
+            memset(pDataCursor, 0, usAlign);
             ulOffset          += usAlign;
             ulBytesUsed       += usAlign;
             ulBytesAvailable1 -= usAlign;
