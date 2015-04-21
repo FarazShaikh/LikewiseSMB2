@@ -1038,6 +1038,7 @@ SMB2MarshalCreateContext(
 
     pCreateContext->usNameOffset = usOffset_struct;
     pCreateContext->usNameLength = usNameSize;
+    LWIO_ASSERT_MSG(pCreateContext->usReserved == 0, "memory must be set to 0");
     pCreateContext->usReserved = 0;
     memcpy(pDataCursor, pName, usNameSize);
 

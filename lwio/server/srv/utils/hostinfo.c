@@ -53,7 +53,7 @@ SrvFreeHostInfo(
 
 /* function added as its missing in 6.1, see djauthinfo.c  DJGetConfiguredDnsDomain*/
 static
-DWORD LWNetGetCurrentDomain(PSTR* ppszDomain)
+DWORD LWNetGetCurrentDomainInt(PSTR* ppszDomain)
 {
     DWORD dwError = 0;
     PSTR pszDnsDomainName = NULL;
@@ -125,7 +125,7 @@ SrvAcquireHostInfo(
         pthread_rwlock_init(&pHostInfo->mutex, NULL);
         pHostInfo->pMutex = &pHostInfo->mutex;
 
-        dwError = LWNetGetCurrentDomain(&pszDomain);
+        dwError = LWNetGetCurrentDomainInt(&pszDomain);
         switch (dwError)
         {
         case ERROR_SUCCESS:
