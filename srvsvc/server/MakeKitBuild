@@ -33,7 +33,7 @@ make() {
        HEADERDEPS="lw/base.h"
 
     mk_group \
-        GROUP=srvsvc_stub \
+        GROUP="srvsvc_stub" \
         CPPFLAGS="-DDCERPC_STUB_BUILD" \
         SOURCES="srvsvc_sstub.c" \
         INCLUDEDIRS=". ../../../include" \
@@ -50,7 +50,7 @@ make() {
        HEADERDEPS="lw/base.h"
 
     mk_group \
-        GROUP=winreg_stub \
+        GROUP="winreg_stub" \
         CPPFLAGS="-DDCERPC_STUB_BUILD" \
         SOURCES="winreg_sstub.c" \
         INCLUDEDIRS=". ../../../include" \
@@ -61,7 +61,7 @@ make() {
     mk_group \
        GROUP="server" \
        GROUPS="srvsvc_stub winreg_stub" \
-       SOURCES="$SERVER_SOURCES     winreg_sstub.c   srvsvc_sstub.c" \
+       SOURCES="$SERVER_SOURCES" \
        INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
        HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \
        DEPS="srvsvc_h.h winreg_h.h" \

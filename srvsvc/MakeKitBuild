@@ -112,7 +112,7 @@ make() {
        mk_program \
              PROGRAM=srvsvcd \
              INSTALLDIR="${MK_SBINDIR}" \
-             GROUPS="utils/utils logging_r/logging_r client/client server/server" \
+             GROUPS="utils/utils logging_r/logging_r client/client server/server server/winreg_stub server/srvsvc_stub" \
              LIBDEPS="lsarpc dcerpc lwioclient lwioshareinfo lwbase lwbase_nothr lwadvapi  lwadvapi_nothr lwiocommon pthread"
 
 #             LIBDEPS="lwbase lwbase_nothr lwadvapi lwadvapi_nothr lsaclient dcerpc lwioclient lwiocommon pthread lsaclient"
