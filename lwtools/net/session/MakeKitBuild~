@@ -1,0 +1,9 @@
+make()
+{
+    mk_group \
+        GROUP="session" \
+        SOURCES="*.c" \
+        INCLUDEDIRS=". ../include ../include" \
+        HEADERDEPS="lw/base.h"
+        LIBDEPS="lwnetapi"
+}

@@ -47,4 +47,20 @@ make()
         INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
         HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \
         DEPS="srvsvc_h.h"
+
+    mk_group \
+        GROUP=clientlib \
+        GROUPS="srvsvc_stub" \
+        SOURCES="srvsvc_cstub.c" \
+        CPPFLAGS="-DDCERPC_STUB_BUILD -DLW_ENABLE_THREADS=1" \
+        HEADERDEPS="dce/rpc.h" \
+        INCLUDEDIRS="."
+
+    mk_group \
+        GROUP=serverlib \
+        GROUPS="srvsvc_stub" \
+        SOURCES="$CLIENT_SOURCES" \
+        INCLUDEDIRS=". ../../include ../../api ../../../include ../../include ../../../../include  ../../../include ../include" \
+        HEADERDEPS="dce/rpc.h lw/base.h lwio/lwio.h lwadvapi.h openssl/md5.h" \
+        DEPS="srvsvc_h.h"
 }

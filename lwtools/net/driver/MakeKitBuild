@@ -1,0 +1,10 @@
+make() {
+       mk_program \
+             PROGRAM=lwnet \
+GROUPS="../common/common ../file/file ../session/session ../share/share" \
+             INSTALLDIR="${MK_SBINDIR}" \
+             INCLUDEDIRS=". ../include ../net/include ../../include" \
+             SOURCES="*.c" \
+             LIBDEPS="lwnetapi lwadvapi srvsvc srvsvc_cs lsaclient"
+#             LIBDEPS="lwbase lwbase_nothr lwadvapi lwadvapi_nothr lsaclient dcerpc lwioclient lwiocommon pthread lsaclient"
+}

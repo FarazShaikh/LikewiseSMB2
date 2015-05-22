@@ -2,6 +2,7 @@ make()
 {
     NETAPI_SOURCES="\
         libmain.c                     \
+        srvsvc.c                      \
 	globals.c                     \
 	net_connection.c              \
 	net_memory.c                  \
@@ -37,7 +38,7 @@ make()
     mk_library \
 	LIB=lwnetapi \
 	SOURCES="$NETAPI_SOURCES" \
-	INCLUDEDIRS="../include" \
+	INCLUDEDIRS=". ../include ../../srvsvc/include" \
 	HEADERDEPS="lw/base.h lwadvapi.h openssl/rand.h lwio/lwio.h dce/rpc.h \
                     lw/rpc/samr.h lw/rpc/lsa.h lw/rpc/wkssvc.h \
                     lwnet.h lsa/ad.h" \

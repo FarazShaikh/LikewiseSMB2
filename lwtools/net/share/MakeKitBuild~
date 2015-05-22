@@ -1,0 +1,9 @@
+make()
+{
+    mk_group \
+        GROUP="share" \
+        SOURCES="*.c" \
+        INCLUDEDIRS=". ../include ../include" \
+        HEADERDEPS="lw/base.h"
+        LIBDEPS="lsaclient"
+}

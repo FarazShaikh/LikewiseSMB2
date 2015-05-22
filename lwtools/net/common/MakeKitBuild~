@@ -1,0 +1,9 @@
+make()
+{
+    mk_group \
+        GROUP="common" \
+        SOURCES="*.c" \
+        INCLUDEDIRS=". ../include ../net/include" \
+        HEADERDEPS="lw/base.h"
+        LIBDEPS="lwbase_nothr lwadvapi_nothr lwmsg_nothr"
+}

@@ -1,5 +1,4 @@
-SUBDIRS="client etc include logging_r server test utils"
-
+SUBDIRS="common file session share driver"
 
 configure()
 {
@@ -103,26 +102,4 @@ configure()
     fi
 
     lw_check_pthread_once_init
-
-    mk_output_file etc/srvsvcd.reg
-}
-
-
-make() {
-       mk_program \
-             PROGRAM=srvsvcd \
-             INSTALLDIR="${MK_SBINDIR}" \
-             GROUPS="utils/utils logging_r/logging_r client/client server/server server/winreg_stub server/srvsvc_stub" \
-             LIBDEPS="lsarpc dcerpc lwioclient lwioshareinfo lwbase lwbase_nothr lwadvapi  lwadvapi_nothr lwiocommon pthread"
-
-#             LIBDEPS="lwbase lwbase_nothr lwadvapi lwadvapi_nothr lsaclient dcerpc lwioclient lwiocommon pthread lsaclient"
-
-
-       mk_library \
-             LIB=srvsvc_cs \
-             GROUPS=client/clientlib
-
-       mk_library \
-             LIB=srvsvc \
-             GROUPS="client/serverlib utils/utils"
 }

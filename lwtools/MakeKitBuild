@@ -1,0 +1,29 @@
+SUBDIRS="net"
+
+configure()
+{
+    lw_define_feature_macros
+
+    MK_CFLAGS="$MK_CFLAGS -Wall -Werror"
+
+    mk_define LOCALSTATEDIR "\"$MK_LOCALSTATEDIR\""
+    mk_define BINDIR "\"$MK_BINDIR\""
+    mk_define SBINDIR "\"$MK_SBINDIR\""
+    mk_define LIBDIR "\"$MK_LIBDIR\""
+    mk_define PREFIXDIR "\"$MK_PREFIX\""
+    mk_define DATADIR "\"$MK_DATADIR\""
+
+    mk_msg "Compiling lwtools"
+
+    mk_check_functions \
+	HEADERDEPS="signal.h" \
+	sigprocmask
+
+    mk_check_functions \
+	HEADERDEPS="ctype.h" \
+        isblank
+
+    mk_check_functions \
+	HEADERDEPS="stdlib.h" \
+	strtol strtoll __strtoll strtoul strtoull __strtoull
+}
