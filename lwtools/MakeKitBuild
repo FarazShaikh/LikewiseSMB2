@@ -12,6 +12,7 @@ configure()
     mk_define LIBDIR "\"$MK_LIBDIR\""
     mk_define PREFIXDIR "\"$MK_PREFIX\""
     mk_define DATADIR "\"$MK_DATADIR\""
+    mk_define CACHEDIR "\"$LW_CACHEDIR\""
 
     mk_msg "Compiling lwtools"
 

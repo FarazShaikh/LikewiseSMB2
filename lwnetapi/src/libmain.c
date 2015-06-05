@@ -35,7 +35,7 @@ NetApiInitialize(
     VOID
     )
 {
-    return 0;
+    return SrvSvcInitMemory();
 }
 
 NET_API_STATUS
@@ -43,6 +43,6 @@ NetApiShutdown(
     VOID
     )
 {
-    return 0;
+    return SrvSvcDestroyMemory();
 }
 
