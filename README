@@ -1,216 +1,135 @@
-                      =============================
-                      README File for Likewise Open
-                      =============================
+This project resurrects the Likewise opensource SMB2 file server effort.
 
-Likewise Open has several goals:
+The base version on the Likewise code base comes from the last know stable open-source revision "likewise-open-6.1.0.406". (downloadable from ubuntu)
+"likewise-open-6.1.0.406" had the SMB2 versions stripped out. The SMB2 server is reinstated by forward porting it from "likewise-open-6.0.0.53010".
 
-(a) Simplify the process of joining non-Microsoft hosts to Active Directory
-    domains,
-(b) Simplify the management of these hosts, and
-(c) Provide a rich development platform for writing applications in
-    heterogeneous networks.
+-End result is that likewise-open-6.1.0.406 can be compiled to deliver a fully functional AD integrated SMB2 server.
+-SMB2 redirector functionality is also present.
+-Share mgmt via wksvc and srvsvc
 
-We hope you find this software useful.
-
-
-                                            -- Gerald Carter
-                                               Likewise Open Project Lead
-                                               <gcarter@likewise.com>
-
-
-Instructions on building likewise-open
-======================================
-
-The likewise-open build uses makekit (http://mkbuild.sourceforge.net)
-While the code is portable among a variety of *nix based platforms
-(Linux, Solaris, AIX, HP-UX, and OS X), this build system is 
-primarily intended for Linux & FreeBSD platforms.
-
-The tool chain no longer relies on libtool and autoconf.  We recommend
-any recent gcc 4.x release to compile.
-
-Before you begin, please read over this list of prerequisite development
-packages (depending on your Linux distro):
-
-  * RedHat/Fedora - gcc, glibc-devel, libuuid-devel, pam-devel, ncurses-devel,
-    flex, bison, rpm-build, rpm-devel, openssl-devel, popt-devel, libxml2-devel
-
-    Optional packages: 
-       o libglade2-devel - To build domainjoin-gui GTK application
-       o libattr-devel   - To enable extended attribute support for the 
-                           Likewise CIFS server (experimental)
-       o 32bit development tools and libraries for compatibility packages
-         when building on x86_64
-         - glibc-devel.i686, libuuid-devel.i686, libgcc.i686,
-           pam-devel.i686
-
-  * Ubuntu - build-essential, fakeroot, devscripts, debhelper,
-    autoconf, automake, libtool, libncurses5-dev, uuid-dev,
-    flex, bison, libpam0g-dev, libssl-dev, libxml2-dev, libpopt-dev
-
-    Optional packages: 
-       o libglade2-dev - To build domainjoin-gui GTK application
-       o libattr1-dev  - To enable extended attribute support for the 
-                         Likewise CIFS server (experimental)
-       o 32bit development tools and libraries for compatibility packages
-         when building on x86_64
-         - ia32-libs, libc6-dev-i386, gcc-multilib
-
-
-The easiest way to begin a build is to run:
-
-  $ mkdir debug && cd debug
-  $ ../configure --debug
-  $ make -jXX package  ## where XX is 2x CPU cores
-
-This will build the necessary binaries and libraries and package them up into
-DEBs or RPMs in the likewise-open/debug/package/ directory.
-
-You may view the complete set of configure options by running
-
-  $ ../configure --help
-
-If you are working directory from the likewise-open git tree, the
-"'build/mkdist" script can be used to generate a release tarball file.
-
-
-Note: When not installing using the local package managers (DEB or RPM),
-it is necessary to manually import all the service registry files after
-installing the binaries.
-
-  $ sudo bash -c 'for file in /opt/likewise/share/config/*reg; do \
-      /opt/likewise/bin/regshell import $file; \
-    done'
-
-
-Likewise Registry Service
-=========================
-
-The Likewise Registry Service (lwregd) is the configuration data store
-used by all Likewise services.  You can view and modify the registry
-settings by running /opt/likewise/bin/regshell as the root user.  For
-example:
-
-  $ sudo /opt/likewise/bin/regshell
-  > cd hkey_this_machine\\services
-
-  hkey_this_machine\services> dir
-  [hkey_this_machine\services]
-  [HKEY_THIS_MACHINE\Services\lsass]
-  ...
-
-  hkey_this_machine\services> cd lsass
-
-  hkey_this_machine\services\lsass> dir
-  Arguments    REG_SZ   "lsassd --syslog"
-  Dependencies REG_SZ   "netlogon lwio lwreg rdr"
-  Description  REG_SZ    "Likewise Security and Authentication Subsystem"
-  Path         REG_SZ    "/opt/likewise/sbin/lsassd"
-  Type         REG_DWORD 0x00000001 (1)
-
-  [HKEY_THIS_MACHINE\Services\lsass\Parameters]
-
-
-Likewise Service Manager
-========================
-
-The Likewise Service Manager (lwsmd) provides a service control
-architecture for starting and stopping all Likewise daemons and drivers
-based on a dependency graph.
-
-The lwsmd daemon itself is managed using the standard SysV init
-script:
-
-  $ /etc/init.d/lwsmd start
-  * Starting Likewise Service Manager: lwsmd              [ OK ] 
-
-Only the registry service (lwregd) is hard coded to be started
-initially.  The user space CLI for managing services is the "lwsm"
-utility.
-
-  $ lwsm list
-  lwreg       running (standalone: 19415)
-  dcerpc      running (standalone: 19453)
-  eventlog    stopped
-  lsass       running (standalone: 19475)
-  lwio        running (standalone: 19438)
-  rdr         running (io: 19438)
-  srv         running (io: 19438)
-  pvfs        running (io: 19438)
-  npfs        running (io: 19438)
-  netlogon    running (standalone: 19468)
-  srvsvc      running (standalone: 19529)
-
-  $ lwsm info lsass
-  Service: lsass
-  Description: Likewise Security and Authentication Subsystem
-  Type: executable
-  Autostart: no
-  Path: /opt/likewise/sbin/lsassd
-  Arguments: 'lsassd' '--syslog'
-  Dependencies: netlogon lwio lwreg rdr
-
-  $ lwsm stop lsass
-  Stopping service reverse dependency: srvsvc
-  Stopping service reverse dependency: srv
-  Stopping service: lsass
-
-  $ lwsm start srvsvc
-  Starting service dependency: lsass
-  Starting service dependency: srv
-  Starting service: srvsvc
+Likewise code is neatly written be very hackable. So please contribute mainly to make this complaint towards SMB3
 
 
 
-Likewise-CIFS
-=============
-
-We are actively implementing a full SMBv1 and SMBv2 protocol stack in the
-Likewise I/O Manager.  Some overview information and details about the
-server architecture are available at http://www.likewiseopen.org/.
-The server offers support for the following client architectures:
-
-  * WinXP
-  * Vista
-  * Win2003/2008 (including R2)
-  * Windows 7
-  * OS 10.5 and later
-  * Linux CIFS fs and Gnome Desktop smb:// URL
-
-No support is planned for Windows 9x or OS X releases prior to 10.5
-
-If you are interested in tracking Likewise development or just experimenting
-with upcoming release feature, please note that the server drivers
-(srv.sys.so, pvfs.sys.so, and npvfs.sys.so) are not loaded by default.
-The easier way to start the CIFS server to for force the Likewise
-Service Manager (lwsmd) to launch all the dependent services for the
-srvsvcd daemon (lwsm start-all srvsvc)/
-
-Finally, the SRV driver exports the /lwcifs directory as the C$ share.
-This directory is created for you automatically and cannot currently
-be disabled.
-
-This following is a short list of known issues in the Likewise CIFS 
-server:
-
-  * No file system integration with byte-range locks or change
-    notification (planned)
-  * No printing support (future ??)
 
 
-Getting Help
-============
 
-The main Likewise Open web site is at http://www.likewiseopen.org/.
-From here you will find links to the project forums, and pre-built
-package downloads.
 
-If you find any bugs, please file a report at
-   http://lobugs.likewiseopen.org/
 
-There are also mailing lists available for developer interaction at
-http://lists.likewiseopen.org/.  There is also a link to the user
-community forums on the community section of likewise.com.
 
-====
 
+
+
+LikeWise CIFS Server Cheat Sheet
+---------------------------------
+
+sudo apt-get install build-essential fakeroot devscripts debhelper autoconf automake libtool libncurses5-dev uuid-dev flex bison libpam0g-dev libssl-dev libxml2-dev libpopt-dev
+sudo apt-get install libglade2-dev libsqlite3-dev libkrb5-dev libldap2-dev libtdb-dev libcurl4-openssl-dev libsasl2-dev
+sudo apt-get install libpam-dev
+sudo apt-get install libpam-dev:i386
+sudo apt-get install build-essential:native
+
+
+-> Compiling.
+   mkdir debug
+   cd debug
+   ../configure --debug; make -j32 package; make -j32 lwtools
+
+-> Installing.
+   dpkg --install ./debug/package/deb/likewise-open/likewise-open_6.1.0-0_amd64.deb
+
+
+-> Joining AD (Optional)
+   sudo apt-get purge avahi (interferes with .local addresses)
+   On2012
+   Enable AD role
+   Enable DNS Server role
+
+   edit /etc/resolv.conf
+   to point only to the AD/DNS 2012 server
+
+   Following should work now
+   # nslookup domainname
+   # ping domainaname
+
+   add the hostname AD hostname example WIN-JDHHBTAP2TR.likewise.local
+   to /etc/hosts
+
+   Sample /etc/hosts
+   10.64.4.181 WIN-JDHHBTAP2TR.likewise.local
+   10.64.4.181 likewise.local
+   127.0.0.1 localhost
+
+   Sample resolv.conf
+   search eng.yourcorp.com
+   #nameserver 10.64.1.100
+   #search likewise.local
+   nameserver 10.64.4.181
+
+   sudo ./staging/packaging/cifs/populate/opt/likewise/bin/domainjoin-cli join ADLAB1.local Administrator PASSWORD
+   sudo ./staging/install-root/opt/likewise/bin/domainjoin-cli  leave
+   sudo lw-set-default-domain ADLAB1.local
+
+-> Enabling Local User
+   sudo /opt/likewise/bin/lw-lsa mod-user --enable-user Administrator
+   sudo  /opt/likewise/bin/lw-lsa  mod-user --set-password PASSWORD Administrator
+
+-> Creating a Share
+   mkdir /lwcifs
+   chmod 0777 /lwcifs
+   sudo ./stage/opt/likewise/sbin/lwnet share add cifs2=c:\\lwcifs
+   sudo ./stage/opt/likewise/sbin/lwnet share set-info cifs2 --allow Everyone
+   ./stage/opt/likewise/sbin/lwnet share
+     Share name  Resource   Remark
+   ------------------------------------------
+     cifs2       C:\wcifs
+     C$          C:\lwcifs  Default Share
+     IPC$        C:\        Remote IPC
+
+
+-> Registry entries
+   set_value [HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\srv] EnableSecuritySignatures 0
+   set_value [HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\srv] RequireSecuritySignatures 0
+   set_value [HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\srv] SupportSmb2 1
+   add_value [HKEY_THIS_MACHINE\Services\srvsvc] Autostart reg_dword 1
+
+
+-> Check if everything is operational
+   sudo ./object/package/open/.deb-likewise-open/build/debian/likewise-open/opt/likewise/bin/lwsm list
+   lwreg       running (standalone: 14487)
+   dcerpc      running (standalone: 14537)
+   eventlog    running (standalone: 14546)
+   lsass       running (standalone: 14625)
+   lwio        running (standalone: 14583)
+   netlogon    running (standalone: 14569)
+   npfs        running (io: 14583)
+   pvfs        running (io: 14583)
+   rdr         running (io: 14583)
+   srv         running (io: 14583)
+   srvsvc      running (standalone: 14717)
+
+
+   sudo gdb --args ./stage/opt/likewise/bin/test_load --threads 1 --connections 1 --user Administrator --password PASSWORD --domain FRZ-DEV 10.64.1.134 cifs2
+   sudo mount -t cifs //10.64.1.134/cifs2  /tmp/mount -o user=Administrator,domain=FRZ-DEV,password=PASSWORD
+
+
+-> Editing and playing with registry (Services Wont start automatically)
+./object/package/open/.deb-likewise-open/build/debian/likewise-open/opt/likewise/bin/lwregshell
+./object/package/open/.deb-likewise-open/build/debian/likewise-open/opt/likewise/bin/lwregshell upgrade /opt/likewise/share/config/lwiod.reg
+   \> set_value [HKEY_THIS_MACHINE\Services\lwio\Parameters\Drivers\srv] SupportSmb2 1
+   sudo  ../lwreg/shell/.libs/lwregshell import ./etc/lwiod.reg
+
+-> WireShark Traces
+   ip.src == 10.65.1.134 && smb and not tcp.analysis.duplicate_ack and not tcp.analysis.retransmission
+
+
+->Authentication Debugging Local Provider:
+  /likewise-open-6.0.0.53010/lsass/server/auth-providers/local-provider/lpuser.c
+  /likewise-open-6.0.0.53010/lsass/server/ntlm/
+
+-> Misc Command
+  ./lwio/tools/lwio-cli/.libs/lwio-cli --get-stats
+  ./lwio/tests/test_pvfs/test_pvfs --ls-open-files 100
+
+-> Debug logs
+  sudo tail -F /var/log/syslog
