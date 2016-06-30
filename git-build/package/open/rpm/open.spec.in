@@ -152,9 +152,11 @@ import_registry_configurations()
     run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/dcerpcd.reg'
     run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/eventlogd.reg'
     run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/lsassd.reg'
-    run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/lwiod.reg'
+    run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/lwiod-srv.reg'
     run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/lwreg.reg'
     run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/netlogond.reg'
+    run_or_fail "$REGSHELL" import '@LW_CONFIGDIR@/srvsvcd.reg'
+    log 'Importing done'
 }
 
 determine_upgrade_type()
