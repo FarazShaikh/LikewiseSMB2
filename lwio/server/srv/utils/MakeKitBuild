@@ -3,5 +3,5 @@ make()
    mk_group \
        GROUP="utils" \
        SOURCES="*.c" \
-       INCLUDEDIRS="../../../include ../../../include/lwio ../include"
+       INCLUDEDIRS="../../../include ../../../include/lwio ../include ../lsass/include ../../../../lsass/include"
 }
