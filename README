@@ -56,8 +56,10 @@ sudo apt-get install build-essential:native
    to /etc/hosts
 
    Sample /etc/hosts
-   10.64.4.181 WIN-JDHHBTAP2TR.likewise.local
-   10.64.4.181 likewise.local
+   10.64.4.181 dc.domain.local
+   10.64.4.181 dc
+   10.64.4.181 domain.local
+   10.64.4.181 domain
    127.0.0.1 localhost
 
    Sample resolv.conf
@@ -66,20 +68,20 @@ sudo apt-get install build-essential:native
    #search likewise.local
    nameserver 10.64.4.181
 
-   sudo ./staging/packaging/cifs/populate/opt/likewise/bin/domainjoin-cli join ADLAB1.local Administrator PASSWORD
-   sudo ./staging/install-root/opt/likewise/bin/domainjoin-cli  leave
-   sudo lw-set-default-domain ADLAB1.local
+   sudo ./debug/stage/opt/likewise/bin/domainjoin-cli join ADLAB1.local Administrator PASSWORD
+   sudo ./debug/stage/opt/likewise/bin/domainjoin-cli  leave
+   sudo ./debug/stage/opt/likewise/bin/lw-set-default-domain ADLAB1.local
 
 -> Enabling Local User
-   sudo /opt/likewise/bin/lw-lsa mod-user --enable-user Administrator
-   sudo  /opt/likewise/bin/lw-lsa  mod-user --set-password PASSWORD Administrator
+   sudo ./debug/stage/opt/likewise/bin/lw-lsa mod-user --enable-user Administrator
+   sudo  ./debug/stage/opt/likewise/bin/lw-lsa  mod-user --set-password PASSWORD Administrator
 
 -> Creating a Share
    mkdir /lwcifs
    chmod 0777 /lwcifs
-   sudo ./stage/opt/likewise/sbin/lwnet share add cifs2=c:\\lwcifs
-   sudo ./stage/opt/likewise/sbin/lwnet share set-info cifs2 --allow Everyone
-   ./stage/opt/likewise/sbin/lwnet share
+   sudo ./debug/stage/opt/likewise/sbin/lwnet share add cifs2=c:\\lwcifs
+   sudo ./debug/stage/opt/likewise/sbin/lwnet share set-info cifs2 --allow Everyone
+   ./debug/stage/opt/likewise/sbin/lwnet share
      Share name  Resource   Remark
    ------------------------------------------
      cifs2       C:\wcifs
@@ -95,7 +97,7 @@ sudo apt-get install build-essential:native
 
 
 -> Check if everything is operational
-   sudo ./object/package/open/.deb-likewise-open/build/debian/likewise-open/opt/likewise/bin/lwsm list
+   sudo ./debug/stage/opt/likewise/bin/lwsm list
    lwreg       running (standalone: 14487)
    dcerpc      running (standalone: 14537)
    eventlog    running (standalone: 14546)
@@ -109,7 +111,7 @@ sudo apt-get install build-essential:native
    srvsvc      running (standalone: 14717)
 
 
-   sudo gdb --args ./stage/opt/likewise/bin/test_load --threads 1 --connections 1 --user Administrator --password PASSWORD --domain FRZ-DEV 10.64.1.134 cifs2
+   sudo gdb --args ./debug/stage/opt/likewise/bin/test_load --threads 1 --connections 1 --user Administrator --password PASSWORD --domain FRZ-DEV 10.64.1.134 cifs2
    sudo mount -t cifs //10.64.1.134/cifs2  /tmp/mount -o user=Administrator,domain=FRZ-DEV,password=PASSWORD
 
 
@@ -128,7 +130,7 @@ sudo apt-get install build-essential:native
   /likewise-open-6.0.0.53010/lsass/server/ntlm/
 
 -> Misc Command
-  ./lwio/tools/lwio-cli/.libs/lwio-cli --get-stats
+  ./debug/stage/opt/likewise/bin/lwio-cli --get-stats
   ./lwio/tests/test_pvfs/test_pvfs --ls-open-files 100
 
 -> Debug logs
