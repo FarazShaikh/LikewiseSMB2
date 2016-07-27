@@ -20,7 +20,7 @@ export DEBUG=--debug
              --datadir=/opt/likewise/share \
              --datarootdir=/opt/likewise/share \
              --build-isas=x86_64 \
-             --lw-bundled-libs='libedit' \
+             --lw-bundled-libs='libedit libuuid krb5 cyrus-sasl openldap sqlite openssl curl' \
              --enable-vmdir-provider=yes \
 	     --package-deb=yes
 

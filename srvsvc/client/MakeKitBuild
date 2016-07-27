@@ -50,7 +50,6 @@ make()
 
     mk_group \
         GROUP=clientlib \
-        GROUPDEPS="srvsvc_stub" \
         SOURCES="srvsvc_cstub.c" \
         CPPFLAGS="-DDCERPC_STUB_BUILD -DLW_ENABLE_THREADS=1" \
         HEADERDEPS="dce/rpc.h" \
