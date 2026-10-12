@@ -1557,6 +1557,14 @@ mk_check_functions()
 
         if ! mk_check_cache "HAVE_$DEFNAME"
         then
+            mk_log mk_check_function \
+                PROTOTYPE="$PROTOTYPE" \
+                HEADERDEPS="$HEADERDEPS" \
+                CPPFLAGS="$CPPFLAGS" \
+                LDFLAGS="$LDFLAGS" \
+                CFLAGS="$CFLAGS" \
+                LIBDEPS="$LIBDEPS"
+
             mk_check_function \
                 PROTOTYPE="$PROTOTYPE" \
                 HEADERDEPS="$HEADERDEPS" \

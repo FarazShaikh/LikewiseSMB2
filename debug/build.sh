@@ -20,5 +20,5 @@ export DEBUG=--debug
              --enable-vmdir-provider=yes \
 	     --package-deb=yes
 
-make all package
+#make all package
 

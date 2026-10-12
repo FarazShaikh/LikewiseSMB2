@@ -121,6 +121,7 @@ fi
 
 if test -f "${MK_HOME}/command/${MK_COMMAND}.sh"
 then
+    echo $MK_SHELL ${_trace} "${MK_HOME}/command/${MK_COMMAND}.sh" "$@"
     exec $MK_SHELL ${_trace} "${MK_HOME}/command/${MK_COMMAND}.sh" "$@"
 else
     echo "Unknown command: $MK_COMMAND"

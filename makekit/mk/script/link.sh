@@ -161,7 +161,10 @@ _gsuffix=".${MK_CANONICAL_SYSTEM%/*}.${MK_CANONICAL_SYSTEM#*/}.og"
 for _group in ${GROUPS}
 do
     unset OBJECTS LIBDEPS LIBDIRS LDFLAGS
-    mk_safe_source "${MK_OBJECT_DIR}${MK_SUBDIR}/$_group${_gsuffix}" || mk_fail "Could not read group $_group"
+    mk_msg "${MK_OBJECT_DIR}${MK_SUBDIR}/$_group${_gsuffix}"
+    echo  "FARAZ " "${MK_OBJECT_DIR}${MK_SUBDIR}/$_group${_gsuffix}"
+#    mk_safe_source "${MK_OBJECT_DIR}${MK_SUBDIR}/$_group${_gsuffix}" || mk_fail "Could not read group $_group"
+    mk_safe_source "${MK_OBJECT_DIR}${MK_SUBDIR}/$_group${_gsuffix}"
 
     GROUP_OBJECTS="$GROUP_OBJECTS ${OBJECTS}"
     COMBINED_LIBDEPS="$COMBINED_LIBDEPS $LIBDEPS"
